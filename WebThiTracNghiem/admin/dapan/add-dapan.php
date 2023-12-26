@@ -16,8 +16,8 @@ if (is_file($hinhpath)) {
 
     <div class="navbar">
         <div class="container">
-            <form action="?act=themda" method="post" enctype="multipart/form-data">
-                    <input type="hidden" name="id_question" value="<?php echo $oldcauhoi['id_ch'] ?>">
+            <form action="?act=themda" method="post" enctype="multipart/form-data" onsubmit="return validateForm()">
+                <input type="hidden" name="id_question" value="<?php echo $oldcauhoi['id_ch'] ?>">
                 <div class="cauhoi">
                     <label for="formGroupExampleInput" class="form-label">Câu hỏi</label>
                     <div class="row2 mb select">
@@ -111,5 +111,17 @@ if (is_file($hinhpath)) {
 
             // Thêm div mới vào container đáp án
             dapanContainer.appendChild(newAnswerDiv);
+        }
+
+        function validateForm() {
+            var selectElements = document.getElementsByName('right_answer[]');
+
+            for (var i = 0; i < selectElements.length; i++) {
+                if (selectElements[i].value === '1') {
+                    return true;
+                }
+            }
+            alert('Bạn cần chọn ít nhất một đáp án là Đúng.');
+            return false;
         }
     </script>
