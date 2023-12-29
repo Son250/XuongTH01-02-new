@@ -21,7 +21,7 @@
         <table class="table table_dsch">
             <tr>
                 <th>Tên kỳ thi</th>
-                <th>Tên kỳ thi</th>
+                <th>Tên đề</th>
                 <th scope="col">STT</th>
                 <th>Các câu hỏi</th>
                 <th>Thao tác</th>
@@ -47,11 +47,11 @@
                     <td><?= $ten_cauhoi . "</br>" ?></td>
                     <td>
                         <!-- <a class="btn" href="">Sửa</a> -->
-                        <a class="btn" href="">Xóa</a>
+                        <a class="btn" href="?act=deleteCauHoiDeThi&idch=<?php echo $id_ch ?>">Xóa</a>
                     </td>
                 </tr>
                 <?php
-                $previousTestId = $id_dethi ;
+                $previousTestId = $id_dethi;
                 $previousExamId = $id_lichthi;
                 ?>
             <?php endforeach; ?>

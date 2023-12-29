@@ -5,15 +5,20 @@ function insert_cauhoi($content, $image, $idcd)
     $sql = "insert into cauhoi(content, image, id_cd) values('$content', '$image', '$idcd')";
     pdo_execute($sql);
 }
-function loadall_cauhoi()
+function loadall_cauhoi($id_cd = null)
 {
     $sql = "SELECT cauhoi.*,
             chuyende.name AS ten_cd
     from cauhoi
     JOIN chuyende ON cauhoi.id_cd = chuyende.id_cd
      order by id_cd desc";
-    $listcauhoi = pdo_query($sql);
-    return $listcauhoi;
+
+    if ($id_cd != null) {
+        $sql .= " WHERE chuyende.id_cd = $id_cd";
+    }
+
+    $result = pdo_query($sql);
+    return $result;
 }
 
 

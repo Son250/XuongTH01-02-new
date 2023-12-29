@@ -7,6 +7,7 @@ function loadall_dethicauhoi($id_lichthi = null)
     lichthi.id AS id_lichthi,
     dethi.ten_de,
     dethi.id AS id_dethi,
+    cauhoi.id_ch AS id_ch,
     cauhoi.content AS ten_cauhoi
     FROM dethi_cauhoi 
     JOIN dethi ON dethi.id = dethi_cauhoi.id_dethi

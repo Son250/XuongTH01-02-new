@@ -539,3 +539,8 @@ select.loc_dethi {
 .add-user button.btn {
     margin-top: 0px;
 }
+
+.add-user {
+    display: flex;
+    justify-content: space-between;
+}

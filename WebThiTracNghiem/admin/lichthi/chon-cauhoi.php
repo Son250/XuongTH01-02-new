@@ -5,21 +5,37 @@
         </div>
         <br>
         <div class="add-user">
-            <a href="?act=dslt">
-                Trở về
-            </a>
-            <a href="javascript:void(0)" onclick="selectAllCheckboxes()">Chọn tất cả</a>
+            <div>
+                <a href="?act=dslt">
+                    Trở về
+                </a>
+                <a href="javascript:void(0)" onclick="selectAllCheckboxes()">Chọn tất cả</a>
 
-            <a href="">Bỏ chọn tất cả</a>
-            <button type="submit" class="btn" name="btnSubmit">Xác nhận</button>
+                <a href="">Bỏ chọn tất cả</a>
+                <button type="submit" class="btn" name="btnSubmit">Xác nhận</button>
 
+            </div>
+            <div>
+                <!-- <div>
+                
+                
+                        <select name="id_cd" id="" class='loc_dethi'>
+                            <option value="" hidden>--Lọc theo chuyên đề --</option>
+                            <?php foreach ($listchuyende as $key => $value) : ?>
+                                <option value="<?= $value['id_cd'] ?>"><?= $value['name'] ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                        <button class="btn" type="submit" name="btnTimkiem">Tìm kiếm</button>
+                    
+                </div> -->
+            </div>
         </div><br>
 
         <div class="main-user">
             <table>
 
                 <div>
-                    <p class="bold">Tên kỳ thi: <?php echo $olddata['name'] ?> </p>
+                    <h4 class="bold">Tên kỳ thi: <?php echo $olddata['name'] ?> </h4>
                 </div>
                 <thead>
                     <tr>
@@ -45,8 +61,6 @@
                             <?php for ($i = 1; $i <= $olddata['so_de_thi']; $i++) : ?>
                                 <td><input type="checkbox" id="ch_de<?= $i ?>_<?= $key ?>" name="selected_ch_de<?= $i ?>[]" value="<?= $id_ch ?>"></td>
                             <?php endfor; ?>
-
-
                         </tr>
                     <?php endforeach; ?>
 

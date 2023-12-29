@@ -63,7 +63,7 @@ include "menu.php";
             case "updatecd":
                 if (isset($_POST['capnhat']) && ($_POST['capnhat'])) {
                     $name = $_POST['tencd'];
-                 
+
                     $image_cd = $_FILES['image_cd']['name'];
                     $id_cd = $_POST['id_cd'];
                     $target_dir = "../uploads/";
@@ -273,7 +273,7 @@ include "menu.php";
 
                     if (move_uploaded_file($_FILES["image_lt"]["tmp_name"], $target_file)) {
                     }
-                    add_lichthi($name,$image_lt, $time_start, $time_end, $time, $so_de_thi);
+                    add_lichthi($name, $image_lt, $time_start, $time_end, $time, $so_de_thi);
                     header("location: ?act=dslt");
                 }
                 include "lichthi/add-lichthi.php";
@@ -302,19 +302,21 @@ include "menu.php";
 
                     if (move_uploaded_file($_FILES["image_lt"]["tmp_name"], $target_file)) {
                     }
-                    update_lichthi($id, $name,$image_lt, $time_start, $time_end, $time, $so_de_thi);
+                    update_lichthi($id, $name, $image_lt, $time_start, $time_end, $time, $so_de_thi);
                     header("location: ?act=dslt");
                 }
                 include "lichthi/edit-lichthi.php";
                 break;
 
             case 'chon_cauhoi':
+                $listchuyende = loadall_chuyende();
                 $listcauhoi = loadall_cauhoi();
                 if (isset($_GET['idlt'])) {
                     $olddata = getold_lichthi($_GET['idlt']);
                 }
 
                 if (isset($_POST['btnSubmit'])) {
+
                     $olddata = getold_lichthi($_POST['id_lichthi']);
                     for ($i = 1; $i <= $olddata['so_de_thi']; $i++) {
                         $name = "Đề " . $i;
@@ -323,7 +325,7 @@ include "menu.php";
                         $key = 'selected_ch_de' . $i;
                         if (isset($_POST[$key])) {
                             // Lấy danh sách các câu hỏi đã được chọn từ checkbox đề 1
-                         
+
                             $selectedQuestions = $_POST[$key];
 
                             foreach ($selectedQuestions as $key => $value) {
@@ -353,7 +355,7 @@ include "menu.php";
                     $time = $_POST['time'];
                     $so_de_thi = $_POST['so_de_thi'];
 
-                    add_lichthi($name,$image_lt, $time_start, $time,$time_end, $so_de_thi);
+                    add_lichthi($name, $image_lt, $time_start, $time, $time_end, $so_de_thi);
                     header("location: ?act=dslt");
                 }
                 include "lichthi/add-lichthi.php";
@@ -361,7 +363,6 @@ include "menu.php";
 
             case "dsdt":
                 if (isset($_POST['btnTimkiem'])) {
-                    // $olddata = getold_lichthi($_GET['idlt']);
                     $dsdt = loadall_dethicauhoi($_POST['id_lichthi']);
                 } else {
                     $dsdt = loadall_dethicauhoi();
