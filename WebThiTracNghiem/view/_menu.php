@@ -22,7 +22,7 @@
 									<select class="header-lang-bx selectpicker" onchange="location = this.value;">
 
 										<option>Xin chào
-											<?php echo $_SESSION['user']['fullname'] ?>
+											<?php echo $_SESSION['user']['fullname'] ?> 
 										</option>
 										<option>Thông tin cá nhân</option>
 										<?php if ($_SESSION['user']['role'] == "1") { ?>

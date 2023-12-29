@@ -63,7 +63,8 @@ include "../model/dethi_cauhoi.php";
             case 'logout':
 
                 unset($_SESSION['user']);
-                header('location:?act=trangchu');
+                // header('location:?act=trangchu');
+                echo "<script>window.location.href='index.php';</script>";
                 break;
             case 'admin':
 
