@@ -1,6 +1,4 @@
-
-<section class="bg-img pt-200 pb-150" data-overlay-light="2"
-	style="background-image: url(../../images/front-end-img/banners/banner-1.jpg); background-position: top center;">
+<section class="bg-img pt-200 pb-150" data-overlay-light="2" style="background-image: url(../../images/front-end-img/banners/banner-1.jpg); background-position: top center;">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
@@ -33,20 +31,13 @@
 							</div>
 						</div>
 						<div class="col-xl-10 col-lg-9 col-md-8 col-sm-12">
-							<div class="owl-carousel owl-theme" data-nav-arrow="false" data-nav-dots="false"
-								data-items="5" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xx-items="2">
-								<div class="item"><img src="../../images/front-end-img/unilogo/uni-1.jpg"
-										class="img-fluid" alt=""></div>
-								<div class="item"><img src="../../images/front-end-img/unilogo/uni-2.jpg"
-										class="img-fluid" alt=""></div>
-								<div class="item"><img src="../../images/front-end-img/unilogo/uni-3.jpg"
-										class="img-fluid" alt=""></div>
-								<div class="item"><img src="../../images/front-end-img/unilogo/uni-4.jpg"
-										class="img-fluid" alt=""></div>
-								<div class="item"><img src="../../images/front-end-img/unilogo/uni-5.jpg"
-										class="img-fluid" alt=""></div>
-								<div class="item"><img src="../../images/front-end-img/unilogo/uni-6.jpg"
-										class="img-fluid" alt=""></div>
+							<div class="owl-carousel owl-theme" data-nav-arrow="false" data-nav-dots="false" data-items="5" data-md-items="4" data-sm-items="3" data-xs-items="2" data-xx-items="2">
+								<div class="item"><img src="../../images/front-end-img/unilogo/uni-1.jpg" class="img-fluid" alt=""></div>
+								<div class="item"><img src="../../images/front-end-img/unilogo/uni-2.jpg" class="img-fluid" alt=""></div>
+								<div class="item"><img src="../../images/front-end-img/unilogo/uni-3.jpg" class="img-fluid" alt=""></div>
+								<div class="item"><img src="../../images/front-end-img/unilogo/uni-4.jpg" class="img-fluid" alt=""></div>
+								<div class="item"><img src="../../images/front-end-img/unilogo/uni-5.jpg" class="img-fluid" alt=""></div>
+								<div class="item"><img src="../../images/front-end-img/unilogo/uni-6.jpg" class="img-fluid" alt=""></div>
 							</div>
 						</div>
 					</div>
@@ -272,13 +263,11 @@
 					<div class="tab-pane active" id="all" role="tabpanel">
 						<div class="px-15 pt-15">
 							<div class="row ">
-								<?php foreach ($dscd as $dscd): ?>
+								<?php foreach ($dscd as $dscd) : ?>
 									<div class="col-lg-3 col-md-6 col-12">
 										<div class="box">
 											<a href="#">
-												<img class="card-img-top"
-													src="../assets/img/<?php echo $dscd['image_cd'] ?>"
-													alt="Card image cap">
+												<img class="card-img-top" src="../assets/img/<?php echo $dscd['image_cd'] ?>" alt="Card image cap">
 											</a>
 											<div class="box-body">
 												<div class="text-start">
@@ -430,8 +419,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/5.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/5.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -448,8 +436,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/2.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/2.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -466,8 +453,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -484,8 +470,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -508,8 +493,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -526,8 +510,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -544,8 +527,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -562,8 +544,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/10.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/10.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -586,8 +567,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/5.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/5.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -604,8 +584,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/2.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/2.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -622,8 +601,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -640,8 +618,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -664,8 +641,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -682,8 +658,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -700,8 +675,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -718,8 +692,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/10.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/10.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -742,8 +715,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/5.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/5.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -760,8 +732,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/2.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/2.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -778,8 +749,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -796,8 +766,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -820,8 +789,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -838,8 +806,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -856,8 +823,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -874,8 +840,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/10.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/10.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -898,8 +863,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/4.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/4.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -916,8 +880,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/6.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/6.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -934,8 +897,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -952,8 +914,7 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="box">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/10.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/10.jpg" alt="Card image cap">
 										</a>
 										<div class="box-body">
 											<div class="text-start">
@@ -992,38 +953,41 @@
 					<div class="tab-pane active" id="tab8" role="tabpanel">
 						<div class="px-15 pt-15">
 							<div class="row">
-								<?php foreach ($dslt as $key => $values): ?>
+								<?php foreach ($dslt as $key => $values) : ?>
 									<div class="col-lg-3 col-md-6 col-12">
 										<div class="card">
 											<a href="#">
-												<img class="card-img-top"
-													src="../assets/img/<?php echo $values['image_lt'] ?>"
-													alt="Card image cap">
+												<img class="card-img-top" src="../assets/img/<?php echo $values['image_lt'] ?>" alt="Card image cap">
 											</a>
 											<div class="position-absolute r-10 t-10">
-												<button type="button"
-													class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-														class="fa fa-heart-o"></i></button>
-												<button type="button"
-													class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-														class="fa fa-share-alt"></i></button>
+												<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+												<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 											</div>
-											
+
 											<div class="card-body">
 												<span class="badge badge-success mb-10">
-													<?php
-													date_default_timezone_set('Asia/Ho_Chi_Minh');
-													$time_start = $values['time_start'];
-													$time_end = $values['time_end'];
-													$time_now = date("Y-m-d H:i:s");
-													if ($time_start < $time_now && $time_now < $time_end) {
-														echo '<a class="vao-thi" name="btn-vaothi" href="#" onclick="startExam(' . $values['id'] . ');">Vào thi</a>';
-													} elseif ($time_start > $time_now) {
-														echo '<a >Chưa đến giờ</a>';
-													} else {
-														echo '<a >Quá giờ thi</a>';
-													}
-													?>
+													<form action="?act=trangthi" method="get">
+														<?php
+														if (isset($_SESSION['user'])) {
+															$iduser = $_SESSION['user']['id'];
+														}
+														?>
+														<input type="text" hidden name="iduser" value="<?= $iduser ?>">
+														<input type="text" name="iddethi" value="<?= $list_trangthi['ten_de'] ?>">
+														<?php
+														date_default_timezone_set('Asia/Ho_Chi_Minh');
+														$time_start = $values['time_start'];
+														$time_end = $values['time_end'];
+														$time_now = date("Y-m-d H:i:s");
+														if ($time_start < $time_now && $time_now < $time_end) {
+															echo '<button class="vao-thi" type="submit" name="btn-vaothi" href="#" onclick="startExam(' . $values['id'] . ');">Vào thi</button>';
+														} elseif ($time_start > $time_now) {
+															echo '<a >Chưa đến giờ</a>';
+														} else {
+															echo '<a >Quá giờ thi</a>';
+														}
+														?>
+													</form>
 												</span>
 												<h4 class="card-title">
 													<?php echo $values['name'] ?>
@@ -1117,16 +1081,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1141,16 +1100,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/1.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/1.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1165,16 +1119,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1189,16 +1138,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1219,16 +1163,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1243,16 +1182,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1267,16 +1201,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1291,16 +1220,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/1.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/1.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1321,16 +1245,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/1.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/1.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1345,16 +1264,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1369,16 +1283,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1393,16 +1302,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1423,16 +1327,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1447,16 +1346,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1471,16 +1365,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/1.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/1.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1495,16 +1384,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1525,16 +1409,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1549,16 +1428,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1573,16 +1447,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/1.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/1.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1597,16 +1466,11 @@
 								<div class="col-lg-3 col-md-6 col-12">
 									<div class="card">
 										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg"
-												alt="Card image cap">
+											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg" alt="Card image cap">
 										</a>
 										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+											<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 										</div>
 										<div class="card-body">
 											<span class="badge badge-success mb-10">Online</span>
@@ -1637,8 +1501,7 @@
 		</div>
 		<div class="row mt-30">
 			<div class="col-12">
-				<div class="owl-carousel owl-theme" data-nav-arrow="true" data-nav-dots="true" data-items="2"
-					data-md-items="2" data-sm-items="2" data-xs-items="1" data-xx-items="1">
+				<div class="owl-carousel owl-theme" data-nav-arrow="true" data-nav-dots="true" data-items="2" data-md-items="2" data-sm-items="2" data-xs-items="1" data-xx-items="1">
 					<div class="item">
 						<div class="testimonial-bx">
 							<div class="testimonial-thumb">
@@ -1732,10 +1595,8 @@
 						<img class="card-img-top" src="../../images/front-end-img/courses/1.jpg" alt="Card image cap">
 					</a>
 					<div class="position-absolute r-10 t-10">
-						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-								class="fa fa-heart-o"></i></button>
-						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-								class="fa fa-share-alt"></i></button>
+						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 					</div>
 					<div class="card-body">
 						<h4 class="card-title">Data</h4>
@@ -1751,10 +1612,8 @@
 						<img class="card-img-top" src="../../images/front-end-img/courses/2.jpg" alt="Card image cap">
 					</a>
 					<div class="position-absolute r-10 t-10">
-						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-								class="fa fa-heart-o"></i></button>
-						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-								class="fa fa-share-alt"></i></button>
+						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 					</div>
 					<div class="card-body">
 						<h4 class="card-title">Management & Marketing</h4>
@@ -1770,10 +1629,8 @@
 						<img class="card-img-top" src="../../images/front-end-img/courses/3.jpg" alt="Card image cap">
 					</a>
 					<div class="position-absolute r-10 t-10">
-						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-								class="fa fa-heart-o"></i></button>
-						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-								class="fa fa-share-alt"></i></button>
+						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 					</div>
 					<div class="card-body">
 						<h4 class="card-title">Technology</h4>
@@ -1789,10 +1646,8 @@
 						<img class="card-img-top" src="../../images/front-end-img/courses/4.jpg" alt="Card image cap">
 					</a>
 					<div class="position-absolute r-10 t-10">
-						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-								class="fa fa-heart-o"></i></button>
-						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-								class="fa fa-share-alt"></i></button>
+						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>
+						<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-share-alt"></i></button>
 					</div>
 					<div class="card-body">
 						<h4 class="card-title">Digital Marketing</h4>
@@ -1809,15 +1664,13 @@
 	</div>
 </section>
 
-<section class="py-50 bg-img countnm-bx" style="background-image: url(../../images/front-end-img/background/bg-3.jpg)"
-	data-overlay="5" data-aos="fade-up">
+<section class="py-50 bg-img countnm-bx" style="background-image: url(../../images/front-end-img/background/bg-3.jpg)" data-overlay="5" data-aos="fade-up">
 	<div class="container">
 		<div class="row">
 			<div class="col-lg-3 col-md-6 col-12">
 				<div class="text-center">
 					<div class="w-80 h-80 l-h-100 rounded-circle b-1 border-white text-center mx-auto">
-						<span class="text-white fs-40 icon-User"><span class="path1"></span><span
-								class="path2"></span></span>
+						<span class="text-white fs-40 icon-User"><span class="path1"></span><span class="path2"></span></span>
 					</div>
 					<h1 class="countnm my-10 text-white fw-300">5428</h1>
 					<div class="text-uppercase text-white">Teachers</div>
@@ -1835,8 +1688,7 @@
 			<div class="col-lg-3 col-md-6 col-12">
 				<div class="text-center">
 					<div class="w-80 h-80 l-h-100 rounded-circle b-1 border-white text-center mx-auto">
-						<span class="text-white fs-40 icon-Group"><span class="path1"></span><span
-								class="path2"></span></span>
+						<span class="text-white fs-40 icon-Group"><span class="path1"></span><span class="path2"></span></span>
 					</div>
 					<h1 class="countnm my-10 text-white fw-300">7485</h1>
 					<div class="text-uppercase text-white">Student</div>
@@ -1845,8 +1697,7 @@
 			<div class="col-lg-3 col-md-6 col-12">
 				<div class="text-center">
 					<div class="w-80 h-80 l-h-100 rounded-circle b-1 border-white text-center mx-auto">
-						<span class="text-white fs-40 icon-Globe"><span class="path1"></span><span
-								class="path2"></span></span>
+						<span class="text-white fs-40 icon-Globe"><span class="path1"></span><span class="path2"></span></span>
 					</div>
 					<h1 class="countnm my-10 text-white fw-300">100</h1>
 					<div class="text-uppercase text-white">Country</div>
@@ -1913,8 +1764,7 @@
 			<div class="col-xl-4 col-md-4 col-12">
 				<div class="blog-post">
 					<div class="entry-image clearfix">
-						<div class="owl-carousel bottom-dots-center owl-theme" data-nav-dots="true" data-autoplay="true"
-							data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1">
+						<div class="owl-carousel bottom-dots-center owl-theme" data-nav-dots="true" data-autoplay="true" data-items="1" data-md-items="1" data-sm-items="1" data-xs-items="1" data-xx-items="1">
 							<div class="item">
 								<img src="../../images/front-end-img/courses/2f.jpg" alt="">
 							</div>
