@@ -1,4 +1,5 @@
 <?php
+ob_start();
 session_start();
 include "../model/pdo.php";
 include "../model/chuyende.php";
@@ -9,11 +10,7 @@ include "../model/cauhoi.php";
 include "../model/dapan.php";
 include "../model/dethi.php";
 include "header.php";
-include "menu.php";
-
-
 ?>
-<div>
     <?php
     if (!isset($_SESSION['user']) || $_SESSION['user']['role'] == "2") {
         header('location:../view/index.php');
@@ -25,7 +22,7 @@ include "menu.php";
         switch ($act) {
             case 'trangchu':
 
-                include "trangchu/trangchu.php";
+                include "home.php";
                 break;
             case 'dscd':
                 $listchuyende = loadall_chuyende();
@@ -76,14 +73,11 @@ include "menu.php";
                 $listchuyende = loadall_chuyende();
                 include "chuyende/list-chuyende.php";
                 break;
-
             case 'dstk':
                 $listtaikhoan = loadall_taikhoan();
-
                 include "taikhoan/list-taikhoan.php";
                 break;
             case 'addtk':
-
                 $listtaikhoan = loadall_taikhoan();
                 if (isset($_POST['btn-addtk'])) {
                     $user = $_POST['user'];
@@ -98,7 +92,6 @@ include "menu.php";
                 include "taikhoan/add-taikhoan.php";
                 break;
             case 'edittk':
-
                 if (isset($_GET['idtk'])) {
                     $old_taikhoan = getold_taikhoan($_GET['idtk']);
                 }
@@ -196,15 +189,34 @@ include "menu.php";
                     $oldcauhoi = loadone_cauhoi($_GET['id']);
                 }
 
-
                 if (isset($_POST['btnSubmit'])) {
-
                     $id_question = $_POST['id_question'];
                     $content_dapan = $_POST['content_dapan'];
                     $right_answer = $_POST['right_answer'];
+
+                    $correctAnswerCount = 0;
+
+                    foreach ($right_answer as $value) {
+                        if ($value == '1') {
+                            $correctAnswerCount++;
+                            if ($correctAnswerCount > 1) {
+                                header("Location: ?act=themda&id=$id_question");
+                                exit();
+                            }
+                        }
+                    }
+
+                    if ($correctAnswerCount === 0) {
+                        header("Location: ?act=dsda&id=$id_question");
+                        exit();
+                    }
+                    $totalAnswers = count($content_dapan);
+
+                    if ($totalAnswers > 4 || $correctAnswerCount === 0) {
+                        header("Location: ?act=dsda&id=$id_question");
+                        exit();
+                    }
                     foreach ($content_dapan as $key => $value) {
-                        //var_dump($_FILES['image']['name'][$key]);
-                        //die ;
                         $photo = "";
                         if ($_FILES['image']['name'][$key] != "") {
                             $photo = time() . "_" . $_FILES['image']['name'][$key];
@@ -213,9 +225,11 @@ include "menu.php";
                         add_dapan($value, $photo, $right_answer[$key], $id_question);
                     }
 
-
+                    // All validations passed, redirect to the desired location
                     header("Location: ?act=dsda&id=$id_question");
+                    exit();
                 }
+
                 include "dapan/add-dapan.php";
                 break;
 
@@ -309,14 +323,12 @@ include "menu.php";
                 break;
 
             case 'chon_cauhoi':
-                $listchuyende = loadall_chuyende();
                 $listcauhoi = loadall_cauhoi();
                 if (isset($_GET['idlt'])) {
                     $olddata = getold_lichthi($_GET['idlt']);
                 }
 
                 if (isset($_POST['btnSubmit'])) {
-
                     $olddata = getold_lichthi($_POST['id_lichthi']);
                     for ($i = 1; $i <= $olddata['so_de_thi']; $i++) {
                         $name = "Đề " . $i;
@@ -335,13 +347,8 @@ include "menu.php";
                         }
                     }
                 }
-
-
                 include "lichthi/chon-cauhoi.php";
                 break;
-
-
-
             case 'dskq':
                 $dskq = loadall_ketqua();
                 include "ketqua/list-ketqua.php";
@@ -361,17 +368,39 @@ include "menu.php";
                 include "lichthi/add-lichthi.php";
                 break;
 
-            case "dsdt":
-                if (isset($_POST['btnTimkiem'])) {
-                    $dsdt = loadall_dethicauhoi($_POST['id_lichthi']);
-                } else {
-                    $dsdt = loadall_dethicauhoi();
-                }
 
-                $ds_lichthi = loadall_lichthi();
+
+            case "dsdt":
+                $dsd = load_dethi($_GET['idlt']);
+                if (isset($_GET['idlt'])) {
+                    $id_lichthi = $_GET['idlt'];
+                }
                 include "dethi/list-dethi.php";
                 break;
+            // case "ctdt":
+            //     $ctdt = load_dethi($_GET['iddt']);
+            //     if (isset($_GET['iddt'])) {
+            //         $iddt = $_GET['iddt'];
+            //     }
+               
+            //     echo "<pre>";
+            //     print_r($ctdt); 
+            //     die;
+                
+                // include "dethi/chitietdethi.php";
+                // break;
 
+                case "ctdt":
+                    if (isset($_POST['btnTimkiem'])) {
+                        // $olddata = getold_lichthi($_GET['idlt']);
+                        $dsdt = loadall_dethicauhoi($_POST['id_lichthi']);
+                    } else {
+                        $dsdt = loadall_dethicauhoi();
+                    }
+    
+                    $ds_lichthi = loadall_lichthi();
+                    include "dethi/chitietdethi.php";
+                    break;
             case "bieudo": {
                     include "thongke/bieudo.php";
                     break;
@@ -380,18 +409,18 @@ include "menu.php";
 
                 header("location:../view/index.php");
                 break;
+            case 'chart':
 
 
+                include "cards.php";
+                break;
             default:
-                include "trangchu/trangchu.php";
+                include "home.php";
                 break;
         }
     } else {
-        include "trangchu/trangchu.php";
+        include "home.php";
     }
     ?>
-</div>
 
-<?php
-include "footer.php";
-?>
+<?php include "footer.php"; ?>

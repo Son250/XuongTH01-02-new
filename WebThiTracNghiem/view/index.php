@@ -81,6 +81,11 @@ include "../model/dethi_cauhoi.php";
                     // Xử lý trường hợp không có id_lichthi được cung cấp
                     //echo "Vui lòng cung cấp id_lichthi.";
                 }
+                //Sơn code
+                // if(isset($_POST['btn-vaothi'])){    
+                //     $list_trangthi = loadAll_dethi($id_lichthi);
+                //     echo $list_trangthi['ten_de'];
+                // }
                 echo "<style>
                     header,footer {
                         display:none;

@@ -3,16 +3,16 @@
 		<div class="row">
 			<div class="col-12">
 				<div class="text-center mt-80">
-					<h1 class="box-title mb-30">Find Your Online Course</h1>
+					<h1 class="box-title mb-30">Tìm kiếm bất kì kỳ thi nào</h1>
 				</div>
 				<form class="cours-search mb-30">
 					<div class="input-group">
-						<input type="text" class="form-control" placeholder="What do you want to learn today?">
-						<button class="btn btn-primary" type="submit">Search</button>
+						<input type="text" class="form-control" placeholder="Nhập từ khóa tìm kiếm ...">
+						<button class="btn btn-primary" type="submit">Tìm kiếm</button>
 					</div>
 				</form>
 				<div class="text-center">
-					<a href="courses_list.html" class="btn btn-primary-light">Browse Courses List</a>
+					<a href="courses_list.html" class="btn btn-primary-light">Danh sách chuyên đề</a>
 				</div>
 			</div>
 		</div>
@@ -27,7 +27,7 @@
 					<div class="row align-items-center m-0">
 						<div class="col-xl-2 col-lg-3 col-md-4 col-sm-12">
 							<div class="uni_tags">
-								<h4>Over 70+ University Cources in one place</h4>
+								<h4>Hơn 70+ kỳ thi cho bạn luyện tập</h4>
 							</div>
 						</div>
 						<div class="col-xl-10 col-lg-9 col-md-8 col-sm-12">
@@ -99,71 +99,49 @@
 				<table class="table" style="text-align: center;">
 					<tbody><!--  -->
 						<tr>
-							<td>kì thi thử quốc gia</td>
-
+							<td>Kì thi thử THPT Quốc Gia</td>
 							<td>100 điểm</td>
 							<td>Nguyễn Thị Thanh Thanh</td>
 							<td>1</td>
 						</tr>
 						<tr>
-							<td>kì thi thử quốc gia</td>
-
+							<td>Kì thi thử THPT Quốc Gia</td>
+							<td>100 điểm</td>
+							<td>Nguyễn Thị Thanh Thanh</td>
+							<td>2</td>
+						</tr>
+						<tr>
+							<td>Kì thi thử THPT Quốc Gia</td>
+							<td>100 điểm</td>
+							<td>Nguyễn Thị Thanh Thanh</td>
+							<td>3</td>
+						</tr>
+						<tr>
+							<td>Kì thi thử THPT Quốc Gia</td>
 							<td>100 điểm</td>
 							<td>Nguyễn Thị Thanh Thanh</td>
 							<td>1</td>
 						</tr>
 						<tr>
-							<td>kì thi thử quốc gia</td>
-
+							<td>Kì thi thử THPT Quốc Gia</td>
 							<td>100 điểm</td>
 							<td>Nguyễn Thị Thanh Thanh</td>
 							<td>1</td>
 						</tr>
 						<tr>
-							<td>kì thi thử quốc gia</td>
-
+							<td>Kì thi thử THPT Quốc Gia</td>
 							<td>100 điểm</td>
 							<td>Nguyễn Thị Thanh Thanh</td>
 							<td>1</td>
 						</tr>
 						<tr>
-							<td>kì thi thử quốc gia</td>
-
+							<td>Kì thi thử THPT Quốc Gia</td>
 							<td>100 điểm</td>
 							<td>Nguyễn Thị Thanh Thanh</td>
 							<td>1</td>
 						</tr>
 						<tr>
-							<td>kì thi thử quốc gia</td>
-
-							<td>100 điểm</td>
-							<td>Nguyễn Thị Thanh Thanh</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>kì thi thử quốc gia</td>
-
-							<td>100 điểm</td>
-							<td>Nguyễn Thị Thanh Thanh</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>kì thi thử quốc gia</td>
-
-							<td>100 điểm</td>
-							<td>Nguyễn Thị Thanh Thanh</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>kì thi thử quốc gia</td>
-
-							<td>100 điểm</td>
-							<td>Nguyễn Thị Thanh Thanh</td>
-							<td>1</td>
-						</tr>
-						<tr>
-							<td>kì thi thử quốc gia</td>
-
+							<td>Kì thi thử THPT Quốc Gia</td>
 							<td>100 điểm</td>
 							<td>Nguyễn Thị Thanh Thanh</td>
 							<td>1</td>
@@ -966,21 +944,21 @@
 
 											<div class="card-body">
 												<span class="badge badge-success mb-10">
-													<form action="?act=trangthi" method="get">
+													<form action="?act=trangthi" method="post">
 														<?php
 														if (isset($_SESSION['user'])) {
 															$iduser = $_SESSION['user']['id'];
 														}
 														?>
 														<input type="text" hidden name="iduser" value="<?= $iduser ?>">
-														<input type="text" name="iddethi" value="<?= $list_trangthi['ten_de'] ?>">
+														<!-- <input type="text" name="iddethi" value="<?= $list_trangthi['ten_de'] ?>"> -->
 														<?php
 														date_default_timezone_set('Asia/Ho_Chi_Minh');
 														$time_start = $values['time_start'];
 														$time_end = $values['time_end'];
 														$time_now = date("Y-m-d H:i:s");
 														if ($time_start < $time_now && $time_now < $time_end) {
-															echo '<button class="vao-thi" type="submit" name="btn-vaothi" href="#" onclick="startExam(' . $values['id'] . ');">Vào thi</button>';
+															echo '<a class="vao-thi" type="submit" name="btn-vaothi" href="#" onclick="startExam(' . $values['id'] . ');">Vào thi</a>';
 														} elseif ($time_start > $time_now) {
 															echo '<a >Chưa đến giờ</a>';
 														} else {
@@ -1000,78 +978,7 @@
 										</div>
 									</div>
 								<?php endforeach; ?>
-								<!-- <div class="col-lg-3 col-md-6 col-12">
-									<div class="card">
-										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/9.jpg"
-												alt="Card image cap">
-										</a>
-										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
-										</div>
-										<div class="card-body">
-											<span class="badge badge-success mb-10">Online</span>
-											<h4 class="card-title">Networking</h4>
-											<div class="d-flex justify-content-between">
-												<a href="#"><span class="fw-bold">Duration:</span> 6 Months</a>
-												<a href="#"><span class="fw-bold">Daily:</span> 2 Hours</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-md-6 col-12">
-									<div class="card">
-										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/8.jpg"
-												alt="Card image cap">
-										</a>
-										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
-										</div>
-										<div class="card-body">
-											<span class="badge badge-success mb-10">Online</span>
-											<h4 class="card-title">Security</h4>
-											<div class="d-flex justify-content-between">
-												<a href="#"><span class="fw-bold">Duration:</span> 6 Months</a>
-												<a href="#"><span class="fw-bold">Daily:</span> 2 Hours</a>
-											</div>
-										</div>
-									</div>
-								</div>
-								<div class="col-lg-3 col-md-6 col-12">
-									<div class="card">
-										<a href="#">
-											<img class="card-img-top" src="../../images/front-end-img/courses/7.jpg"
-												alt="Card image cap">
-										</a>
-										<div class="position-absolute r-10 t-10">
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-heart-o"></i></button>
-											<button type="button"
-												class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i
-													class="fa fa-share-alt"></i></button>
-										</div>
-										<div class="card-body">
-											<span class="badge badge-success mb-10">Online</span>
-											<h4 class="card-title">IT & Software</h4>
-											<div class="d-flex justify-content-between">
-												<a href="#"><span class="fw-bold">Duration:</span> 6 Months</a>
-												<a href="#"><span class="fw-bold">Daily:</span> 2 Hours</a>
-											</div>
-										</div>
-									</div>
-								</div> -->
+						
 							</div>
 						</div>
 					</div>

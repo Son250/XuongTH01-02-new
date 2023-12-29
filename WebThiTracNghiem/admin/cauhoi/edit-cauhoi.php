@@ -10,14 +10,13 @@ if (is_file($hinhpath)) {
     $hinh= "";
 }
 ?>
-<div class="container">
-    <div class="container-fluid">
-        <h2>Cập nhật câu hỏi</h2>
-    </div>
+<div class="container-fluid">
 
+<!-- Page Heading -->
+<h1 class="h3 mb-3 text-gray-800">Cập nhật câu hỏi</h1>
+<p class="mb-3"><a  href="?act=dsch">Danh sách câu hỏi</a></p>
     <form action="index.php?act=update_ch" method="post" enctype="multipart/form-data">
         <input type="hidden" name="id" value="<?php echo $id_ch ?>">
-
         <div class="mb-3">
             <label class="form-label">Câu hỏi</label>
             <input type="text" class="form-control" name="content" value="<?= $content ?>">
@@ -26,10 +25,8 @@ if (is_file($hinhpath)) {
             <label class="form-label">Hình ảnh</label> <br>
             <?php echo $hinh ?><br>
             <input class="form-control" type="file" name="image">
-
-        </div> <br>
-        <div>
-
+        </div>
+        <div class="mb-3">
             <select class="form-select" aria-label="Default select example" name="idcd">
                 <option value="0">Chuyên đề</option>
                 <?php
@@ -41,12 +38,9 @@ if (is_file($hinhpath)) {
                 }
                 ?>
             </select>
-
         </div>
-        <br> <br>
-        <div class="btn-group">
-            <button type="button" class="btn btn-primary" onclick="window.location.href='index.php?act=dsch'">Danh sách câu hỏi</button>
-            <input class="btn btn-primary" type="submit" name="capnhat" value="Cập nhật">
+        <div class="mb-3">
+            <input class="btn btn-success" type="submit" name="capnhat" value="Cập nhật">
         </div>
     </form>
 </div>
