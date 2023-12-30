@@ -39,3 +39,8 @@ function loadAll_dethi($id_lichthi)
     $dethi = pdo_query_one($sql);
     return $dethi;
 }
+function load_dethi($idlt){
+    $sql = "SELECT * FROM `dethi` WHERE id_lichthi = '$idlt'";
+    $dethi = pdo_query($sql);
+    return $dethi;
+}

@@ -944,28 +944,28 @@
 
 											<div class="card-body">
 												<span class="badge badge-success mb-10">
-													<form action="?act=trangthi" method="post">
-														<?php
-														if (isset($_SESSION['user'])) {
-															$iduser = $_SESSION['user']['id'];
-														}
-														?>
-														<input type="text" hidden name="iduser" value="<?= $iduser ?>">
-														<!-- <input type="text" name="iddethi" value="<?= $list_trangthi['ten_de'] ?>"> -->
-														<?php
-														date_default_timezone_set('Asia/Ho_Chi_Minh');
-														$time_start = $values['time_start'];
-														$time_end = $values['time_end'];
-														$time_now = date("Y-m-d H:i:s");
-														if ($time_start < $time_now && $time_now < $time_end) {
-															echo '<a class="vao-thi" type="submit" name="btn-vaothi" href="#" onclick="startExam(' . $values['id'] . ');">Vào thi</a>';
-														} elseif ($time_start > $time_now) {
-															echo '<a >Chưa đến giờ</a>';
-														} else {
-															echo '<a >Quá giờ thi</a>';
-														}
-														?>
-													</form>
+
+													<?php
+													if (isset($_SESSION['user'])) {
+														$iduser = $_SESSION['user']['id'];
+													}
+													?>
+													<!-- <input type="text" hidden name="iduser" value="<?= $iduser ?>"> -->
+													<!-- <input type="text" name="iddethi" value="<?= $list_trangthi['ten_de'] ?>"> -->
+													<?php
+													date_default_timezone_set('Asia/Ho_Chi_Minh');
+													$time_start = $values['time_start'];
+													$time_end = $values['time_end'];
+													$time_now = date("Y-m-d H:i:s");
+													if ($time_start < $time_now && $time_now < $time_end) {
+														echo '<a class="vao-thi" type="submit" name="btn-vaothi" href="#" onclick="startExam(' . $values['id'] . ');">Vào thi</a>';
+													} elseif ($time_start > $time_now) {
+														echo '<a >Chưa đến giờ</a>';
+													} else {
+														echo '<a >Quá giờ thi</a>';
+													}
+													?>
+
 												</span>
 												<h4 class="card-title">
 													<?php echo $values['name'] ?>
@@ -978,7 +978,7 @@
 										</div>
 									</div>
 								<?php endforeach; ?>
-						
+
 							</div>
 						</div>
 					</div>
