@@ -1,4 +1,3 @@
-
 <script language="javascript">
     var hours = null;
     var minutes = null;
@@ -142,7 +141,7 @@
                     </div> -->
 
                 </div>
-                <form action="">
+                <form action="?act=trangthi&id_lichthi=<?= $id_lichthi ?>" method="post" onsubmit="return confirmSubmission()">
                     <button type='submit' name="btnNopbai">Nộp bài</button>
                 </form>
             </div>
@@ -150,7 +149,12 @@
 
         <div class="box-center" id="fixedBoxCenter">
             <div class="box-title" align='center'>
-                <p class="bold"><?= $list_trangthi['ten_de'] ?></p>
+                <p class="bold">
+                    <?php
+                    echo $list_trangthi['ten_de'];
+                    // echo $_SESSION['ten_de'];
+                    ?></p>
+
             </div>
             <div class="box-content">
 
@@ -242,4 +246,9 @@
 
         }
     });
+</script>
+<script>
+    function confirmSubmission() {
+        return confirm('Bạn đồng ý nộp bài?');
+    }
 </script>

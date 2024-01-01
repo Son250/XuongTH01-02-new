@@ -957,12 +957,16 @@
 													$time_start = $values['time_start'];
 													$time_end = $values['time_end'];
 													$time_now = date("Y-m-d H:i:s");
-													if ($time_start < $time_now && $time_now < $time_end) {
-														echo '<a class="vao-thi" type="submit" name="btn-vaothi" href="#" onclick="startExam(' . $values['id'] . ');">Vào thi</a>';
-													} elseif ($time_start > $time_now) {
-														echo '<a >Chưa đến giờ</a>';
+													if (isset($_SESSION['user'])) {
+														if ($time_start < $time_now && $time_now < $time_end) {
+															echo '<a class="vao-thi" type="submit" name="btn-vaothi" href="#" onclick="startExam(' . $values['id'] . ');">Vào thi</a>';
+														} elseif ($time_start > $time_now) {
+															echo '<a >Chưa đến giờ</a>';
+														} else {
+															echo '<a >Quá giờ thi</a>';
+														}
 													} else {
-														echo '<a >Quá giờ thi</a>';
+														echo  '<a>Bạn cần đăng nhập để thi</a>';
 													}
 													?>
 

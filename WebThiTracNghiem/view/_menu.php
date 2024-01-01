@@ -25,9 +25,11 @@
 											<?php echo $_SESSION['user']['fullname'] ?> 
 										</option>
 										<option>Thông tin cá nhân</option>
+
 										<?php if ($_SESSION['user']['role'] == "1") { ?>
 											<option value="../admin/index.php">Đăng nhập Admin</option>
 										<?php } ?>
+										<option>Lịch sử làm bài</option>
 										<option>Quên mật khẩu</option>
 										<option value="?act=logout">Đăng xuất</option>
 

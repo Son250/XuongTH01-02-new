@@ -5,6 +5,7 @@ include "../model/taikhoan.php";
 include "../model/chuyende.php";
 include "../model/lichthi.php";
 include "../model/dethi.php";
+include "../model/ketqua.php";
 include "_header.php";
 include "_menu.php";
 include "../model/dethi_cauhoi.php";
@@ -73,30 +74,36 @@ include "../model/dethi_cauhoi.php";
             case "trangthi":
                 if (isset($_GET['id_lichthi'])) {
                     $id_lichthi = $_GET['id_lichthi'];
-                    $lichthi = getOne_lichthi($id_lichthi);
-                    // Tải dữ liệu đề thi
-                    $list_trangthi = loadAll_dethi($id_lichthi);
-                    // Hiển thị nội dung trang_thi.php, chẳng hạn
-                    //echo "Nội dung trang thi ở đây.";
-                } else {
-                    // Xử lý trường hợp không có id_lichthi được cung cấp
-                    //echo "Vui lòng cung cấp id_lichthi.";
-                }
-                //Sơn code
-                // if(isset($_POST['btn-vaothi'])){    
-                //     $list_trangthi = loadAll_dethi($id_lichthi);
-                //     echo $list_trangthi['ten_de'];
-                // }
-                echo "<style>
-                    header,footer {
-                        display:none;
-                    }
-                </style>";
-                $list_cauhoi = load_cauoi($list_trangthi['id']);
-                
 
+                    $lichthi = getOne_lichthi($id_lichthi);
+
+                    if (!isset($_SESSION['ten_de'])) {
+                        $list_trangthi = loadAll_dethi($id_lichthi);
+                        $_SESSION['ten_de'] = $list_trangthi;
+                    } else {
+                        $list_trangthi = $_SESSION['ten_de'];
+                    }
+
+
+                    if (isset($_POST['btnNopbai'])) {
+                        // add_ketqua_nguoidung($_SESSION['user']['id'], $list_trangthi['ten_de']);
+
+                        unset($_SESSION['ten_de']);
+                        // session_destroy(); 
+                        echo "<script>window.location.href='?act=ketqua';</script>";
+                    }
+                }
+                echo "<style>
+                        header,footer {
+                            display:none;
+                        }
+                    </style>";
+                $list_cauhoi = load_cauoi($list_trangthi['id']);
                 include 'trang_thi2.php';
-               
+                break;
+            case 'ketqua':
+
+                include 'ketqua.php';
                 break;
             default:
 

@@ -6,10 +6,14 @@ function loadall_ketqua()
     return $result;
 }
 
-
 function add_ketqua($name, $time_start, $time_end, $time, $so_de_thi)
 {
     $sql = "INSERT INTO `lichthi`(`name`, `time_start`, `time_end`,`time`, `so_de_thi`) VALUES ('$name','$time_start','$time_end','$time', '$so_de_thi')";
+    pdo_execute($sql);
+}
+function add_ketqua_nguoidung($id_nguoi_dung, $id_de_thi)
+{
+    $sql = "INSERT INTO `ketqua`(`bo_ket_qua`, `id_nguoi_dung`, `id_de_thi`, `diem`) VALUES ('not','$id_nguoi_dung', '$id_de_thi','not')";
     pdo_execute($sql);
 }
 

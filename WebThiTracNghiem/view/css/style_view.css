@@ -54,3 +54,24 @@ a.vao-thi:hover {
     display: block;
 }
 
+/* CSS kết quả người dùng  */
+.ket-qua {
+    margin: 0px auto;
+    max-width: 1100px;
+    padding: 0px;
+    padding-top: 155px;
+}
+
+.ket-qua .box span {
+    color: red;
+    font-size: 18px;
+}
+.ket-qua .box-container {
+    display: flex;
+    gap: 25px;
+}
+.ket-qua .box-container .box {
+    padding: 10px;
+    border-radius: 15px;
+    text-align: center;
+}
