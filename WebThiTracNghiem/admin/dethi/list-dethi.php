@@ -10,6 +10,8 @@
         </div>
         <div class="card-body">
             <div class="table-responsive">
+                <h5 class="text-dark"><?php echo $olddata['name'] ?></h5>
+                <??>
                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                     <thead>
                         <tr>
@@ -29,13 +31,13 @@
                     <tbody>
 
                         <?php foreach ($dsd as $key => $value) : extract($value) ?>
-                            <input type="hidden" name="iddt" value="<?= $id ?>">
+                            <input type="hidden" name="iddt" value="<?= $id ?>">z
                             <td><?php echo $id ?></td>
                             <td><?php echo $ten_de ?></td>
                             <td>
-                                <a href="?act=ctdt" class="btn btn-success btn-circle btn-sm"> <i class="fa fa-th-list"></i></a>
-                                <a class="btn btn-primary btn-circle btn-sm" href="?act=editlt&idlt=<?php echo $id ?>"> <i class="fas fa-edit"></i></a>
-                                <a class="btn btn-danger btn-circle btn-sm" href="?act=deletedt&iddt=<?php echo $id ?>" onclick="return confirm(\'Bạn có chắc chắn muốn xóa?\')'"> <i class="fas fa-trash"></i></a>
+                                <a href="?act=ct_tungde&idlt=<?php echo $id_lichthi ?>&iddt=<?php echo $id ?>" class="btn btn-success btn-circle btn-sm"> <i class="fa fa-th-list"></i></a>
+                                <!-- <a class="btn btn-primary btn-circle btn-sm" href="?act=editlt&idlt=<?php echo $id ?>"> <i class="fas fa-edit"></i></a> -->
+                                <!-- <a class="btn btn-danger btn-circle btn-sm" href="?act=deletedt&iddt=<?php echo $id ?>" onclick="return confirm(\'Bạn có chắc chắn muốn xóa?\')'"> <i class="fas fa-trash"></i></a> -->
                             </td>
                             </tr>
                         <?php endforeach; ?>

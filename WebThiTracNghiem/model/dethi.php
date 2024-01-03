@@ -39,8 +39,40 @@ function loadAll_dethi($id_lichthi)
     $dethi = pdo_query_one($sql);
     return $dethi;
 }
-function load_dethi($idlt){
+function load_dethi($idlt)
+{
     $sql = "SELECT * FROM `dethi` WHERE id_lichthi = '$idlt'";
     $dethi = pdo_query($sql);
     return $dethi;
+}
+
+function loadOne_dethi($iddt)
+{
+    $sql = "SELECT * FROM `dethi` WHERE id = '$iddt'";
+    $dethi = pdo_query_one($sql);
+    return $dethi;
+}
+
+
+function loadOne_dethicauhoi($iddt)
+{
+
+    $sql = "SELECT dethi_cauhoi.*,
+    lichthi.name AS ten_kythi,
+    lichthi.id AS id_lichthi,
+    dethi.ten_de,
+    dethi.id AS id_dethi,
+    cauhoi.id_ch AS id_ch,
+    cauhoi.content AS ten_cauhoi,
+    dapan.content_dapan
+    FROM dethi_cauhoi 
+    JOIN dethi ON dethi.id = dethi_cauhoi.id_dethi
+    JOIN lichthi ON lichthi.id = dethi.id_lichthi
+    JOIN cauhoi ON cauhoi.id_ch = dethi_cauhoi.id_cauhoi
+    JOIN dapan ON dapan.id_question = cauhoi.id_ch
+     WHERE id_dethi = $iddt
+     ";
+
+    $result = pdo_query($sql);
+    return $result;
 }

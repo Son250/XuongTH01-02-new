@@ -26,15 +26,15 @@
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">Bạn bấm đăng xuất?</h5>
                     <button class="close" type="button" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                <div class="modal-body">Nếu bạn bấm "Đồng ý" thì bạn sẽ quay trở lại web người dùng .</div>
                 <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="../view/index.php">Logout</a>
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Trở lại</button>
+                    <a class="btn btn-primary" href="?act=logout">Đồng ý</a>
                 </div>
             </div>
         </div>
