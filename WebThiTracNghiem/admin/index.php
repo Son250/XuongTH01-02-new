@@ -9,6 +9,7 @@ include "../model/ketqua.php";
 include "../model/cauhoi.php";
 include "../model/dapan.php";
 include "../model/dethi.php";
+include "../model/dethi_cauhoi.php";
 include "header.php";
 ?>
     <?php
@@ -371,36 +372,48 @@ include "header.php";
 
 
             case "dsdt":
+                $olddata = loadone_lichthi($_GET['idlt']);
                 $dsd = load_dethi($_GET['idlt']);
                 if (isset($_GET['idlt'])) {
                     $id_lichthi = $_GET['idlt'];
                 }
                 include "dethi/list-dethi.php";
                 break;
-            // case "ctdt":
-            //     $ctdt = load_dethi($_GET['iddt']);
-            //     if (isset($_GET['iddt'])) {
-            //         $iddt = $_GET['iddt'];
-            //     }
-               
-            //     echo "<pre>";
-            //     print_r($ctdt); 
-            //     die;
-                
+                // case "ctdt":
+                //     $ctdt = load_dethi($_GET['iddt']);
+                //     if (isset($_GET['iddt'])) {
+                //         $iddt = $_GET['iddt'];
+                //     }
+
+                //     echo "<pre>";
+                //     print_r($ctdt); 
+                //     die;
+
                 // include "dethi/chitietdethi.php";
                 // break;
 
-                case "ctdt":
-                    if (isset($_POST['btnTimkiem'])) {
-                        // $olddata = getold_lichthi($_GET['idlt']);
-                        $dsdt = loadall_dethicauhoi($_POST['id_lichthi']);
-                    } else {
-                        $dsdt = loadall_dethicauhoi();
-                    }
-    
-                    $ds_lichthi = loadall_lichthi();
-                    include "dethi/chitietdethi.php";
-                    break;
+            case "ctdt":
+                if (isset($_POST['btnTimkiem'])) {
+                    // $olddata = getold_lichthi($_GET['idlt']);
+                    $dsdt = loadall_dethicauhoi($_POST['id_lichthi']);
+                } else {
+                    $dsdt = loadall_dethicauhoi();
+                }
+
+                $ds_lichthi = loadall_lichthi();
+                include "dethi/chitietdethi.php";
+                break;
+
+
+            case 'ct_tungde':
+                $olddata = loadone_lichthi($_GET['idlt']);
+                $dsdt = loadall_dethicauhoi($_GET['idlt']);
+                $getOneDeThi = loadOne_dethi($_GET['iddt']);
+                $dsch_deThi = loadOne_dethicauhoi($_GET['iddt']);
+                $list_cauhoi = load_cauoi($_GET['iddt']);
+                include "dethi/chitiettungde.php";
+                break;
+
             case "bieudo": {
                     include "thongke/bieudo.php";
                     break;
@@ -413,6 +426,12 @@ include "header.php";
 
 
                 include "cards.php";
+                break;
+            case 'logout':
+
+                unset($_SESSION['user']);
+                // header('location:?act=trangchu');
+                echo "<script>window.location.href='index.php';</script>";
                 break;
             default:
                 include "home.php";
