@@ -24,7 +24,7 @@
 										<option>Xin chào
 											<?php echo $_SESSION['user']['fullname'] ?> 
 										</option>
-										<option>Thông tin cá nhân</option>
+										<option value="?act=userprofile">Thông tin cá nhân</option>
 
 										<?php if ($_SESSION['user']['role'] == "1") { ?>
 											<option value="../admin/index.php">Đăng nhập Admin</option>
@@ -38,7 +38,7 @@
 								</li>
 							<?php } ?>
 							<?php if (!isset($_SESSION['user'])) { ?>
-								<li class="me-10 ps-10"><a href="?act=login"><i class="fa fa-user d-md-inline-block d-none"></i>
+								<li class="me-10 ps-10"><a href="?act=register"><i class="fa fa-user d-md-inline-block d-none"></i>
 										Register</a></li>
 								<li class="me-10 ps-10"><a href="?act=login"><i class="fa fa-sign-in d-md-inline-block d-none"></i> Login</a></li>
 							<?php } ?>
