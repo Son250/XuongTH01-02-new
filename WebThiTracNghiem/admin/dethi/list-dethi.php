@@ -31,7 +31,7 @@
                     <tbody>
 
                         <?php foreach ($dsd as $key => $value) : extract($value) ?>
-                            <input type="hidden" name="iddt" value="<?= $id ?>">z
+                            <input type="hidden" name="iddt" value="<?= $id ?>">
                             <td><?php echo $id ?></td>
                             <td><?php echo $ten_de ?></td>
                             <td>

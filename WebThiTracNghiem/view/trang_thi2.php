@@ -5,71 +5,71 @@
     var timeout = null;
 
     function setTimeExam(minutes) {
-    var currentdate = new Date();
-    var newDateObj = new Date();
-    newDateObj.setTime(currentdate.getTime() + minutes * 60 * 1000);
+        var currentdate = new Date();
+        var newDateObj = new Date();
+        newDateObj.setTime(currentdate.getTime() + minutes * 60 * 1000);
 
-    let mini = currentdate.getMinutes() < 10 ? "0" + currentdate.getMinutes() : currentdate.getMinutes();
-    let start = currentdate.getHours() + ":" + mini;
+        let mini = currentdate.getMinutes() < 10 ? "0" + currentdate.getMinutes() : currentdate.getMinutes();
+        let start = currentdate.getHours() + ":" + mini;
 
-    let mini2 = newDateObj.getMinutes() < 10 ? "0" + newDateObj.getMinutes() : newDateObj.getMinutes();
-    let end = newDateObj.getHours() + ":" + mini2;
+        let mini2 = newDateObj.getMinutes() < 10 ? "0" + newDateObj.getMinutes() : newDateObj.getMinutes();
+        let end = newDateObj.getHours() + ":" + mini2;
 
-    return {
-        start,
-        end
-    };
-}
+        return {
+            start,
+            end
+        };
+    }
 
     function calculateTimeDifference(time) {
-    // Get the stored initial timestamp and remaining time from localStorage
-    var storedInitialTimestamp = localStorage.getItem('initialTimestamp');
-    var storedRemainingTime = localStorage.getItem('remainingTime');
+        // Lấy timestamp khởi tạo và thời gian còn lại từ localStorage
+        var storedInitialTimestamp = localStorage.getItem('initialTimestamp');
+        var storedRemainingTime = localStorage.getItem('remainingTime');
 
-    // Check if the exam has already started
-    if (storedInitialTimestamp && storedRemainingTime) {
-        var currentTimestamp = new Date().getTime();
-        var elapsedTime = currentTimestamp - parseInt(storedInitialTimestamp);
+        // Kiểm tra xem kỳ thi đã bắt đầu chưa
+        if (storedInitialTimestamp && storedRemainingTime) {
+            var currentTimestamp = new Date().getTime();
+            var elapsedTime = currentTimestamp - parseInt(storedInitialTimestamp);
 
-        // Calculate remaining time
-        var remainingTime = Math.max(0, parseInt(storedRemainingTime) - elapsedTime);
+            // Tính thời gian còn lại
+            var remainingTime = Math.max(0, parseInt(storedRemainingTime) - elapsedTime);
 
-        // Continue the countdown
-        var timeParts = splitTime(remainingTime/1000);
-        hours = timeParts.hours;
-        minutes = timeParts.minutes;
-        seconds = timeParts.seconds;
+            // Tiếp tục đếm ngược
+            var timeParts = splitTime(remainingTime / 1000);
+            hours = timeParts.hours;
+            minutes = timeParts.minutes;
+            seconds = timeParts.seconds;
 
-        // Display the result and update the countdown
-        updateResult();
-        updateClock();
-    } else {
-        // If the exam hasn't started, calculate the initial time and start the countdown
-        var timeExam = setTimeExam(time);
-        var startTime = timeExam.start;
-        var endTime = timeExam.end;
+            // Hiển thị kết quả và cập nhật đồng hồ đếm ngược
+            updateResult();
+            updateClock();
+        } else {
+            // Nếu kỳ thi chưa bắt đầu, tính thời gian khởi tạo và bắt đầu đồng hồ đếm ngược
+            var timeExam = setTimeExam(time);
+            var startTime = timeExam.start;
+            var endTime = timeExam.end;
 
-        var startTimeInSeconds = parseTimeToSeconds(startTime);
-        var endTimeInSeconds = parseTimeToSeconds(endTime);
+            var startTimeInSeconds = parseTimeToSeconds(startTime);
+            var endTimeInSeconds = parseTimeToSeconds(endTime);
 
-        var timeDifferenceInSeconds = endTimeInSeconds - startTimeInSeconds;
+            var timeDifferenceInSeconds = endTimeInSeconds - startTimeInSeconds;
 
-        var timeParts = splitTime(timeDifferenceInSeconds);
+            var timeParts = splitTime(timeDifferenceInSeconds);
 
-        hours = timeParts.hours;
-        minutes = timeParts.minutes;
-        seconds = timeParts.seconds;
+            hours = timeParts.hours;
+            minutes = timeParts.minutes;
+            seconds = timeParts.seconds;
 
-        // Display the result and start the countdown
-        updateResult();
-        updateClock();
+            // Hiển thị kết quả và bắt đầu đếm ngược
+            updateResult();
+            updateClock();
 
-        // Store the initial timestamp and remaining time in localStorage
-        var initialTimestamp = new Date().getTime();
-        localStorage.setItem('initialTimestamp', initialTimestamp);
-        localStorage.setItem('remainingTime', timeDifferenceInSeconds * 1000);
+            // Lưu thời điểm khởi tạo và thời gian còn lại vào localStorage
+            var initialTimestamp = new Date().getTime();
+            localStorage.setItem('initialTimestamp', initialTimestamp);
+            localStorage.setItem('remainingTime', timeDifferenceInSeconds * 1000);
+        }
     }
-}
 
 
     function parseTimeToSeconds(timeString) {
@@ -95,8 +95,14 @@
     }
 
     function updateResult() {
-        // Display the initial time
+        // Hiển thị thời gian ban đầu
         document.getElementById('total_time').innerText = formatTimeUnit(hours) + ':' + formatTimeUnit(minutes) + ':' + formatTimeUnit(seconds);
+    }
+
+    function clearStoredTime() {
+        // Xóa dữ liệu đã lưu trữ từ localStorage
+        localStorage.removeItem('initialTimestamp');
+        localStorage.removeItem('remainingTime');
     }
 
     function updateClock() {
@@ -104,6 +110,12 @@
         if (hours === 0 && minutes === 0 && seconds === 0) {
             clearTimeout(timeout);
             alert('Hết giờ');
+
+            // Xóa thời gian đã lưu trữ khi hết giờ
+            clearStoredTime();
+
+            // Chuyển hướng đến trang kết quả
+            window.location.href = '?act=ketqua';
         } else {
             // Cập nhật giá trị đếm ngược
             if (seconds > 0) {
@@ -133,7 +145,7 @@
     setTimeout(function() {
         calculateTimeDifference(<?= $lichthi['time'] ?>)
     }, 1000);
-    // Check if there is stored time on page load
+    // Kiểm tra xem có thời gian đã lưu trữ khi trang web được tải
 
     getStoredTime();
 </script>

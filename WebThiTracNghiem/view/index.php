@@ -6,6 +6,8 @@ include "../model/chuyende.php";
 include "../model/lichthi.php";
 include "../model/dethi.php";
 include "../model/ketqua.php";
+$dscd = loadall_chuyende();
+$dslt = loadall_lichthi();
 include "_header.php";
 include "_menu.php";
 include "../model/dethi_cauhoi.php";
@@ -13,8 +15,8 @@ include "../model/dethi_cauhoi.php";
 
 <div>
     <?php
-    $dslt = loadall_lichthi();
-    $dscd = loadall_chuyende();
+
+
     //Controller
     if (isset($_GET['act']) && $_GET['act'] != "") {
         $act = $_GET['act'];
@@ -53,9 +55,27 @@ include "../model/dethi_cauhoi.php";
 
                 include "About.php";
                 break;
-            case 'chuyende':
-
-                include "chuyende.php";
+            case 'dsdt':
+                $olddata = loadone_lichthi($_GET['idlt']);
+                $dsd = load_dethi($_GET['idlt']);
+                if (isset($_GET['idlt'])) {
+                    $id_lichthi = $_GET['idlt'];
+                }
+                include "./chuyende/listdethi.php";
+                break;
+                
+            case 'ct_tungde':
+                $olddata = loadone_lichthi($_GET['idlt']);
+                $dsdt = loadall_dethicauhoi($_GET['idlt']);
+                $getOneDeThi = loadOne_dethi($_GET['iddt']);
+                $dsch_deThi = loadOne_dethicauhoi($_GET['iddt']);
+                $list_cauhoi = load_cauoi($_GET['iddt']);
+                echo "<style>
+                        header,footer {
+                            display:none;
+                        }
+                    </style>";
+                include "./chuyende/chitietdethi.php";
                 break;
             case 'lichthi':
 
@@ -101,6 +121,8 @@ include "../model/dethi_cauhoi.php";
                 $list_cauhoi = load_cauoi($list_trangthi['id']);
                 include 'trang_thi2.php';
                 break;
+            
+              
             case 'ketqua':
 
                 include 'ketqua.php';

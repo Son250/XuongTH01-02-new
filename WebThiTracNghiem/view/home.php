@@ -245,7 +245,7 @@
 									<div class="col-lg-3 col-md-6 col-12">
 										<div class="box">
 											<a href="#">
-												<img class="card-img-top" src="../assets/img/<?php echo $dscd['image_cd'] ?>" alt="Card image cap">
+												<img class="card-img-top" src="../uploads/<?php echo $dscd['image_cd'] ?>" alt="Card image cap">
 											</a>
 											<div class="box-body">
 												<div class="text-start">
@@ -256,7 +256,9 @@
 														Sept 16th, 2020</p>
 													<!-- <p class="box-text">Some quick example text to build on the card title
 													and make up the bulk of the card's content.</p> -->
-													<a href="#" class="btn btn-outline btn-primary btn-sm">Xem thêm </a>
+													<input type="hidden" name="idlt" value="<?= $id?>">
+
+													<a href="?act=dsdt&idlt=<?php echo $id ?>" class="btn btn-outline btn-primary btn-sm">Xem thêm</a>
 												</div>
 											</div>
 										</div>
@@ -935,7 +937,7 @@
 									<div class="col-lg-3 col-md-6 col-12">
 										<div class="card">
 											<a href="#">
-												<img class="card-img-top" src="../assets/img/<?php echo $values['image_lt'] ?>" alt="Card image cap">
+												<img class="card-img-top" src="../uploads/<?php echo $values['image_lt'] ?>" alt="Card image cap">
 											</a>
 											<div class="position-absolute r-10 t-10">
 												<button type="button" class="waves-effect waves-circle btn btn-circle btn-dark btn-xs me-5"><i class="fa fa-heart-o"></i></button>

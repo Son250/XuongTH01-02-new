@@ -57,35 +57,33 @@
 			<li class="dropdown">
 				<a href="#">Điểm</a>
 			</li>
-
 			<li class="dropdown">
 				<a href="#">Chuyên đề</a>
 				<ul class="dropdown-menu">
-					<li><a href="courses_list.html">Chuyên đề cái nịt</a></li>
-					<li><a href="courses_list_right_sidebar.html">Courses List Right Sidebar</a></li>
-					<li><a href="courses_list-map.html">Courses with Map</a></li>
-					<li><a href="courses_categories.html">Courses Categories</a></li>
-					<li><a href="courses_details.html">Courses Details</a></li>
-					<li><a href="courses_details_right_sidebar.html">Courses Details right sidebar</a></li>
+				<?php
+					foreach ($dscd as $cd) {
+						extract($cd);
+						$linkcd = "". $id_cd;
+						echo '<li><a href="' . $linkcd . '">' . $name . '</a></li>';
+					} ?>
+					<!-- <li><a href="courses_list.html">Chuyên đề cái nịt</a></li> -->
+					
 				</ul>
 			</li>
-
-
 			<li class="dropdown">
 				<a href="#">Kì thi</a>
 				<ul class="dropdown-menu">
-					<li><a href="courses_list.html">Kỳ thi cái nịt</a></li>
-					<li><a href="courses_list_right_sidebar.html">Courses List Right Sidebar</a></li>
-					<li><a href="courses_list-map.html">Courses with Map</a></li>
-					<li><a href="courses_categories.html">Courses Categories</a></li>
-					<li><a href="courses_details.html">Courses Details</a></li>
-					<li><a href="courses_details_right_sidebar.html">Courses Details right sidebar</a></li>
+					<?php foreach ($dslt as $lt) {
+						extract($lt);
+						$linkcd = "?act=dsdt&idlt=" . $id;
+						echo '<li><a href="' . $linkcd . '">' . $name . '</a></li>';
+					} ?>
+					<li><a href="courses_list.html"></a></li>	
 				</ul>
 			</li>
 			<li>
 				<a href="?act=trangchu">Trang chủ</a>
 			</li>
-
 		</ul>
 
 
