@@ -5,10 +5,10 @@
 			<div class="row">
 				<div class="col-12">
 					<div class="text-center">						
-						<h2 class="page-title text-white"><?php echo $name?></h2>
+						<h2 class="page-title text-white"><?php echo $olddata['name'] ?></h2>
 						<ol class="breadcrumb bg-transparent justify-content-center">
 							<li class="breadcrumb-item"><a href="#" class="text-white-50"><i class="mdi mdi-home-outline"></i></a></li>
-							<li class="breadcrumb-item text-white active" aria-current="page"><?php echo $name?></li>
+							<li class="breadcrumb-item text-white active" aria-current="page"><?php echo $olddata['name'] ?></li>
 						</ol>
 					</div>
 				</div>
