@@ -32,19 +32,19 @@ function getOne_lichthi($id)
     return $result;
 }
 
-function update_lichthi($id, $name,$image_lt, $time_start, $time_end, $time, $so_de_thi)
+function update_lichthi($id, $name, $image_lt, $time_start, $time_end, $time, $so_de_thi)
 {
     if ($image_lt != "") {
-    $sql = "UPDATE `lichthi` SET `name`='$name',`image_lt`='$image_lt',`time_start`='$time_start',`time_end`='$time_end',`time`='$time' ,`so_de_thi`='$so_de_thi' WHERE id= $id";
-    }else{
+        $sql = "UPDATE `lichthi` SET `name`='$name',`image_lt`='$image_lt',`time_start`='$time_start',`time_end`='$time_end',`time`='$time' ,`so_de_thi`='$so_de_thi' WHERE id= $id";
+    } else {
         $sql = "UPDATE `lichthi` SET `name`='$name',`time_start`='$time_start',`time_end`='$time_end',`time`='$time' ,`so_de_thi`='$so_de_thi' WHERE id= $id";
-
     }
     pdo_execute($sql);
 }
 
-function loadone_lichthi($id){
-    $sql="SELECT * FROM `lichthi` WHERE `id`= $id LIMIT 1";
+function loadone_lichthi($id)
+{
+    $sql = "SELECT * FROM `lichthi` WHERE `id`= $id LIMIT 1";
     $res = pdo_query_one($sql);
     return $res;
 }
@@ -55,3 +55,10 @@ function loadone_lichthi($id){
 //     $result = pdo_query($sql);
 //     return $result;
 // }
+
+function check_input($data)
+{
+    $data = trim($data);
+    $data = htmlspecialchars($data);
+    return $data;
+}

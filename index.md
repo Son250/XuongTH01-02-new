@@ -93,7 +93,15 @@
         Ví dụ 20 câu đúng => 20 x 0,25 = 5điểm : Cả nhóm
         + Cắt giao diện tất cả : Sơn
         + Trang Đăng ký tài khoản và Thông tin tài khoản (code html,css và php): Trang
-
+        
+3.7. Chia việc ngày 03/01/2023
+        + Ở trang Home ng dùng, làm chức năng tìm kiếm theo kỳ thi: Trang
+        + Khi hết giờ (thời gian == 00:00:00) thì bài thi tự động Nộp bài, 
+        khi load lại trang web thì thời gian ko được reset lại, vd: đang thi còn 15:59:00 thì khi load lại trang web, thời gian phải hiển thị là 15:59:00 :Thanh
+        + Bấm Nộp bài, dữ liệu đc lưu lên bảng ketqua, tính điểm và hiển thị lên màn hình ng dùng: Thắm
+        + Chức năng thi (ôn tập) theo chuyên đề: Thanh
+        + Thống kê bên Admin và Ng dùng (Top 10) : Sơn
+        + Thông tin cá nhân (hiển thị/ update) và quên mật khẩu: Hoàng
 ## Cơ sở dữ liệu
     tai_khoan:
         + id: PK
