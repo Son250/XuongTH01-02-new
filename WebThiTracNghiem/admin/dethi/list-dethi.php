@@ -17,22 +17,22 @@
                         <tr>
                             <th>STT</th>
                             <th>Tên đề thi</th>
-                            <th>Thao tác</th>
+                            <th>Xem chi tiết</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>STT</th>
                             <th>Tên đề thi</th>
-                            <th>Thao tác</th>
+                            <th>Xem chi tiết</th>
                         </tr>
                         </tr>
                     </tfoot>
                     <tbody>
 
                         <?php foreach ($dsd as $key => $value) : extract($value) ?>
-                            <input type="hidden" name="iddt" value="<?= $id ?>">z
-                            <td><?php echo $id ?></td>
+                            <input type="hidden" name="iddt" value="<?= $id ?>">
+                            <td><?php echo $key +1  ?></td>
                             <td><?php echo $ten_de ?></td>
                             <td>
                                 <a href="?act=ct_tungde&idlt=<?php echo $id_lichthi ?>&iddt=<?php echo $id ?>" class="btn btn-success btn-circle btn-sm"> <i class="fa fa-th-list"></i></a>

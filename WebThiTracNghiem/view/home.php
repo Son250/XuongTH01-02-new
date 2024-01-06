@@ -256,7 +256,7 @@
 														Sept 16th, 2020</p>
 													<!-- <p class="box-text">Some quick example text to build on the card title
 													and make up the bulk of the card's content.</p> -->
-													<a href="#" class="btn btn-outline btn-primary btn-sm">Xem thêm </a>
+													<a href="#" class="btn btn-outline btn-primary btn-sm">Ôn thi</a>
 												</div>
 											</div>
 										</div>
