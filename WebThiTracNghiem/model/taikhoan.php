@@ -50,3 +50,14 @@ function delete_taikhoan($idtk)
     $sql = "DELETE FROM `taikhoan` WHERE id=$idtk";
     pdo_execute($sql);
 }
+
+function insert_tkhoan($fullname,$email,$pass){
+    $sql = "INSERT INTO taikhoan (username, email, password) VALUES ('$fullname', '$email',' $pass')" ;
+   return pdo_execute($sql) ;
+}
+
+function loadone_tkhoan($id){
+    $sql= "SELECT *  FROM taikhoan where id='$id'";
+    $row=pdo_query_one($sql);
+    return $row;
+}

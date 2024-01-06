@@ -48,9 +48,29 @@ include "../model/dethi_cauhoi.php";
                 }
 
             case 'register':
-
+                if(isset($_POST['dangki']) ){
+                    $fullname = $_POST['fullname'];
+                    $email = $_POST['email'];
+                    $pass = $_POST['pass'];
+                    $repass = $_POST['repass'];
+                    if($pass != $repass){
+                        $error ="Mật khẩu nhập lại chưa đúng!";
+                       
+                    }else{
+                        insert_tkhoan($fullname, $email,$pass) ;
+                       header('Location: ?act=login');
+                        $error = "Susscess" ;
+                       
+                    }
+                   
+                }
                 include "register.php";
                 break;
+                case 'userprofile':
+               
+                
+                    include 'userprofile.php' ;
+                    break;
             case 'About':
 
                 include "About.php";
