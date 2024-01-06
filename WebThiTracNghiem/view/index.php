@@ -50,6 +50,7 @@ include "../model/dethi_cauhoi.php";
             case 'register':
                 if(isset($_POST['dangki']) ){
                     $fullname = $_POST['fullname'];
+                    $username = $_POST['username'];
                     $email = $_POST['email'];
                     $pass = $_POST['pass'];
                     $repass = $_POST['repass'];
@@ -57,9 +58,9 @@ include "../model/dethi_cauhoi.php";
                         $error ="Mật khẩu nhập lại chưa đúng!";
                        
                     }else{
-                        insert_tkhoan($fullname, $email,$pass) ;
+                        insert_tkhoan($username,$fullname , $email, $pass);
                        header('Location: ?act=login');
-                        $error = "Susscess" ;
+                        $error = "Susscess";
                        
                     }
                    
