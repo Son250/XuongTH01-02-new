@@ -39,9 +39,9 @@ function getold_taikhoan($idtk)
     $result = pdo_query_one($sql);
     return $result;
 }
-function update_taikhoan($id, $user, $pass, $email, $address, $role)
+function update_taikhoan($id, $name, $pass, $fullname, $email,  $address)
 {
-    $sql = "UPDATE `taikhoan` SET `username`='$user',`password`='$pass',`email`='$email',`address`='$address',`role`='$role' WHERE id= $id";
+    $sql = "UPDATE `taikhoan` SET `username`='$name',`password`='$pass',`fullname`='$fullname',`email`='$email',`address`='$address' WHERE id = $id";
     pdo_execute($sql);
 }
 
@@ -51,13 +51,21 @@ function delete_taikhoan($idtk)
     pdo_execute($sql);
 }
 
-function insert_tkhoan($username,$fullname,$email,$pass){
-    $sql = "INSERT INTO taikhoan (`username`,`fullname`, `email`, `password`) VALUES ('$username', '$fullname','$email','$pass')" ;
-   return pdo_execute($sql) ;
+function insert_tkhoan($username, $fullname, $email, $pass)
+{
+    $sql = "INSERT INTO taikhoan (`username`,`fullname`, `email`, `password`) VALUES ('$username', '$fullname','$email','$pass')";
+    return pdo_execute($sql);
 }
 
-function loadone_tkhoan($id){
-    $sql= "SELECT * FROM taikhoan where id='$id'";
-    $row=pdo_query_one($sql);
+function loadone_tkhoan($id)
+{
+    $sql = "SELECT * FROM taikhoan where id='$id'";
+    $row = pdo_query_one($sql);
     return $row;
+}
+function laythongtintaikhoan_id($idtk)
+{
+    $sql = "SELECT * FROM taikhoan WHERE id = $idtk";
+    $result = pdo_query_one($sql);
+    return $result;
 }

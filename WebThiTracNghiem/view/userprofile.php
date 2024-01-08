@@ -3,54 +3,54 @@
         <div class="row container-login">
             <div class="col-lg-3 col-md-4 col-12">
                 <div class="box position-sticky t-100">
-                    <?php if(isset($_SESSION['user'])):?>
-                    <div class="box-body text-center">
-                        <div class="mb-20 mt-20">
-                            <?php 
-                              $thongtin = loadone_tkhoan($_SESSION['user']['id']);
-                           
+                    <?php if (isset($_SESSION['user'])) : ?>
+                        <div class="box-body text-center">
+                            <div class="mb-20 mt-20">
+                                <?php
+                                $thongtin = loadone_tkhoan($_SESSION['user']['id']);
 
-                             $hinhanh = "../uploads/" . $thongtin['image'];
-                             if (is_file($hinhanh)) {
-                                 $img_path = "<img src= '".$hinhanh."' width='150' class='rounded-circle bg-info-light' >";
-                             } else {
-                                 $img_path = "<i class='fa-solid fa-user'></i>";
-                             }
-                            
-                            ?>
-                            <?php echo $img_path ?>
-                            <h4 class="mt-20 mb-0"><?php echo $_SESSION['user']['username'] ?></h4>
-                            <a href="mailto:dummy@gmail.com"><?php echo $_SESSION['user']['email'] ?></a>
-                        </div>
-                       
-                        
-                        <ul class="list-inline text-center mt-20">
-                            <li><a href="javascript:void(0)" data-bs-toggle="tooltip" title="" data-original-title="Facebook"><i class="fa fa-facebook-square fs-20"></i></a></li>
-                            <li><a href="javascript:void(0)" data-bs-toggle="tooltip" title="" data-original-title="Twitter"><i class="fa fa-twitter-square fs-20"></i></a></li>
-                            <li><a href="javascript:void(0)" data-bs-toggle="tooltip" title="" data-original-title="Instagram"><i class="fa fa-instagram fs-20"></i></a></li>
-                            <li><a href="javascript:void(0)" data-bs-toggle="tooltip" title="" data-original-title="Linkedin"><i class="fa fa-linkedin-square fs-20"></i></a></li>
-                        </ul>
-                        <ul class="cours-star">
-                            <li class="active"><i class="fa fa-star"></i></li>
-                            <li class="active"><i class="fa fa-star"></i></li>
-                            <li class="active"><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                            <li><i class="fa fa-star"></i></li>
-                        </ul>
-                    </div>
-                    <div class="p-15 bt-1 bb-1">
-                        <div class="row text-center">
-                            <div class="col-6 be-1">
-                                <a href="#" class="link d-flex align-items-center justify-content-center font-medium">
-                                    <span class="icon-Mail fs-20 me-5"></span>Message</a>
+
+                                $hinhanh = "../uploads/" . $thongtin['image'];
+                                if (is_file($hinhanh)) {
+                                    $img_path = "<img src= '" . $hinhanh . "' width='150' class='rounded-circle bg-info-light' >";
+                                } else {
+                                    $img_path = "<i class='fa-solid fa-user'></i>";
+                                }
+
+                                ?>
+                                <?php echo $img_path ?>
+                                <h4 class="mt-20 mb-0"><?php echo $if_account['username'] ?></h4>
+                                <a href="mailto:dummy@gmail.com"><?php echo $if_account['email'] ?></a>
                             </div>
-                            <div class="col-6">
-                                <a href="#" class="link d-flex align-items-center justify-content-center font-medium">
-                                    <span class="icon-Code1 fs-20 me-5"><span class="path1"></span><span class="path2"></span></span>Portfolio</a>
+
+
+                            <ul class="list-inline text-center mt-20">
+                                <li><a href="javascript:void(0)" data-bs-toggle="tooltip" title="" data-original-title="Facebook"><i class="fa fa-facebook-square fs-20"></i></a></li>
+                                <li><a href="javascript:void(0)" data-bs-toggle="tooltip" title="" data-original-title="Twitter"><i class="fa fa-twitter-square fs-20"></i></a></li>
+                                <li><a href="javascript:void(0)" data-bs-toggle="tooltip" title="" data-original-title="Instagram"><i class="fa fa-instagram fs-20"></i></a></li>
+                                <li><a href="javascript:void(0)" data-bs-toggle="tooltip" title="" data-original-title="Linkedin"><i class="fa fa-linkedin-square fs-20"></i></a></li>
+                            </ul>
+                            <ul class="cours-star">
+                                <li class="active"><i class="fa fa-star"></i></li>
+                                <li class="active"><i class="fa fa-star"></i></li>
+                                <li class="active"><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                                <li><i class="fa fa-star"></i></li>
+                            </ul>
+                        </div>
+                        <div class="p-15 bt-1 bb-1">
+                            <div class="row text-center">
+                                <div class="col-6 be-1">
+                                    <a href="#" class="link d-flex align-items-center justify-content-center font-medium">
+                                        <span class="icon-Mail fs-20 me-5"></span>Message</a>
+                                </div>
+                                <div class="col-6">
+                                    <a href="?act=update-tk&idtk=<?php echo $if_account['id'] ?>" class="link d-flex align-items-center justify-content-center font-medium">
+                                        <span class="icon-Code1 fs-20 me-5"><span class="path1"></span><span class="path2"></span></span>Cập nhật</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <!-- <ul class="nav d-block nav-stacked" id="pills-tab23" role="tablist">
+                        <!-- <ul class="nav d-block nav-stacked" id="pills-tab23" role="tablist">
                         <li class="nav-item">
                             <a class="nav-link active" id="pills-personal-tab" data-bs-toggle="pill" href="#pills-personal" role="tab" aria-controls="pills-personal" aria-selected="true">
                                 <i class="me-10 mdi mdi-account"></i>Personal Details
@@ -93,13 +93,13 @@
                                     <li class="w-md-p50 float-start pb-10">
                                         <a href="#" class="text-dark d-flex justify-content-between pe-50">
                                             <span class="fw-500">FullName :</span>
-                                            <span class="text-muted"><?php echo $_SESSION['user']['fullname'] ?> </span>
+                                            <span class="text-muted"><?php echo $if_account['fullname'] ?> </span>
                                         </a>
                                     </li>
                                     <li class="w-md-p50 float-start pb-10">
                                         <a href="#" class="text-dark d-flex justify-content-between">
                                             <span class="fw-500">Address :</span>
-                                            <span class="text-muted"><?php echo $_SESSION['user']['address'] ?></span>
+                                            <span class="text-muted"><?php echo $if_account['address'] ?></span>
                                         </a>
                                     </li>
                                     <li class="w-md-p50 float-start pb-10">
@@ -111,15 +111,15 @@
                                     <li class="w-md-p50 float-start pb-10">
                                         <a href="#" class="text-dark d-flex justify-content-between">
                                             <span class="fw-500">Email:</span>
-                                            <span class="text-muted"><?php echo $_SESSION['user']['email'] ?></span>
+                                            <span class="text-muted"><?php echo $if_account['email'] ?></span>
                                         </a>
                                     </li>
-                                   
-                                    
+
+
                                 </ul>
-                               
-                               
-                                
+
+
+
                                 <hr>
                                 <div class="popup-gallery">
                                     <div class="d-flex gap-items-2 mb-10">
@@ -645,7 +645,7 @@
                             </div>
                         </div>
                     </div>
-                    <?php endif ; ?>
+                <?php endif; ?>
                 </div>
             </div>
         </div>

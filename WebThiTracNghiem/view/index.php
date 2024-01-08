@@ -48,30 +48,60 @@ include "../model/dethi_cauhoi.php";
                 }
 
             case 'register':
-                if(isset($_POST['dangki']) ){
+                if (isset($_POST['dangki'])) {
                     $fullname = $_POST['fullname'];
                     $username = $_POST['username'];
                     $email = $_POST['email'];
                     $pass = $_POST['pass'];
                     $repass = $_POST['repass'];
-                    if($pass != $repass){
-                        $error ="Mật khẩu nhập lại chưa đúng!";
-                       
-                    }else{
-                        insert_tkhoan($username,$fullname , $email, $pass);
-                       header('Location: ?act=login');
+                    if ($pass != $repass) {
+                        $error = "Mật khẩu nhập lại chưa đúng!";
+                    } else {
+                        insert_tkhoan($username, $fullname, $email, $pass);
+                        header('Location: ?act=login');
                         $error = "Susscess";
-                       
                     }
-                   
                 }
                 include "register.php";
                 break;
-                case 'userprofile':
-               
-                
-                    include 'userprofile.php' ;
-                    break;
+            case 'userprofile':
+                if (isset($_GET['idtk'])) {
+                    $if_account = laythongtintaikhoan_id($_GET['idtk']);
+                }
+                include 'userprofile.php';
+                break;
+            case 'forgot_password':
+                if (isset($_POST['btn-forgot-password'])) {
+                    if ($_POST['email'] != "") {
+                        $check_email = check_email($_POST['email']);
+                        if (is_array($check_email)) {
+                            $thongbaomk = "Mật khẩu của bạn là:" . $check_email['password'];
+                        } else {
+                            $thongbaomk = "Email này không tồn tại!";
+                        }
+                    } else {
+                        $thongbaomk = "Email không được để trống";
+                    }
+                }
+                include "forget_pass.php";
+                break;
+            case 'update-tk':
+                if (isset($_GET['idtk'])) {
+                    $old_account = getold_taikhoan($_GET['idtk']);
+                }
+                if (isset($_POST['btn-update-tk'])) {
+                    $id = $_POST['id'];
+                    $name = $_POST['username'];
+                    $pass = $_POST['password'];
+                    $fullname = $_POST['fullname'];
+                    $email = $_POST['email'];
+                    $address = $_POST['diachi'];
+                    update_taikhoan($id, $name, $pass, $fullname, $email, $address);
+                    $thongbao = "Cập nhật thành công!";
+                    header("location:?act=userprofile&idtk=" . $id);
+                }
+                include "update_taikhoan.php";
+                break;
             case 'About':
 
                 include "About.php";
@@ -84,7 +114,7 @@ include "../model/dethi_cauhoi.php";
                 }
                 include "./chuyende/listdethi.php";
                 break;
-                
+
             case 'ct_tungde':
                 $olddata = loadone_lichthi($_GET['idlt']);
                 $dsdt = loadall_dethicauhoi($_GET['idlt']);
@@ -142,8 +172,8 @@ include "../model/dethi_cauhoi.php";
                 $list_cauhoi = load_cauoi($list_trangthi['id']);
                 include 'trang_thi2.php';
                 break;
-            
-              
+
+
             case 'ketqua':
 
                 include 'ketqua.php';

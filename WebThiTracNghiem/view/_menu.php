@@ -22,15 +22,14 @@
 									<select class="header-lang-bx selectpicker" onchange="location = this.value;">
 
 										<option>Xin chào
-											<?php echo $_SESSION['user']['fullname'] ?> 
+											<?php echo $_SESSION['user']['fullname'] ?>
 										</option>
-										<option value="?act=userprofile">Thông tin cá nhân</option>
-
+										<option value="?act=userprofile&idtk=<?php echo $_SESSION['user']['id'] ?>">Thông tin cá nhân</option>
 										<?php if ($_SESSION['user']['role'] == "1") { ?>
 											<option value="../admin/index.php">Đăng nhập Admin</option>
 										<?php } ?>
 										<option>Lịch sử làm bài</option>
-										<option>Quên mật khẩu</option>
+										<option value="?act=forgot_password">Quên mật khẩu</option>
 										<option value="?act=logout">Đăng xuất</option>
 
 									</select>
@@ -60,14 +59,14 @@
 			<li class="dropdown">
 				<a href="#">Chuyên đề</a>
 				<ul class="dropdown-menu">
-				<?php
+					<?php
 					foreach ($dscd as $cd) {
 						extract($cd);
-						$linkcd = "". $id_cd;
+						$linkcd = "" . $id_cd;
 						echo '<li><a href="' . $linkcd . '">' . $name . '</a></li>';
 					} ?>
 					<!-- <li><a href="courses_list.html">Chuyên đề cái nịt</a></li> -->
-					
+
 				</ul>
 			</li>
 			<li class="dropdown">
@@ -78,7 +77,7 @@
 						$linkcd = "?act=dsdt&idlt=" . $id;
 						echo '<li><a href="' . $linkcd . '">' . $name . '</a></li>';
 					} ?>
-					<li><a href="courses_list.html"></a></li>	
+					<li><a href="courses_list.html"></a></li>
 				</ul>
 			</li>
 			<li>
