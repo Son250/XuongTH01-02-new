@@ -977,8 +977,8 @@
 													<?php echo $values['name'] ?>
 												</h4>
 												<div class="d-flex justify-content-between">
-													<a href="#"><span class="fw-bold">Duration:</span> 6 Months</a>
-													<a href="#"><span class="fw-bold">Daily:</span> 2 Hours</a>
+													<a href="#"><span class="fw-bold">Ngày tạo: </span> 6 Months</a>
+													<a href="#"><span class="fw-bold">Thời gian tạo: </span> 2 Hours</a>
 												</div>
 											</div>
 										</div>

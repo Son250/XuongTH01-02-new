@@ -60,3 +60,15 @@ function get_question_id_from_answer($answer_id)
     
     return null; // hoặc giá trị mặc định khác tùy thuộc vào logic của bạn
 }
+function dapan($id){
+    $sql="SELECT dapan.content_dapan , dethi_cauhoi.id_cauhoi, dethi_cauhoi.id_dethi,dethi.ten_de
+    FROM dethi_cauhoi 
+    JOIN cauhoi ON dethi_cauhoi.id_cauhoi = cauhoi.id_ch 
+    JOIN dapan ON cauhoi.id_ch = dapan.id_question 
+    join dethi on dethi_cauhoi.id_dethi=dethi.id
+    WHERE dapan.right_answer = 1 AND dethi.id = $id;";
+    
+    $result = pdo_query($sql);
+    return $result;
+
+}
