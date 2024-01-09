@@ -35,3 +35,17 @@ function update_ketqua($id, $name, $time_start, $time_end, $time, $so_de_thi)
     $sql = "UPDATE `lichthi` SET `name`='$name',`time_start`='$time_start',`time_end`='$time_end',`time`='$time' ,`so_de_thi`='$so_de_thi' WHERE id= $id";
     pdo_execute($sql);
 }
+function  kq($true,$userID,$id,$diem){
+    $conn = pdo_get_connection();
+    $sql = "INSERT INTO ketqua(bo_ket_qua, id_nguoi_dung, id_de_thi, diem) 
+            VALUES (:bo_ket_qua, :id_nguoi_dung, :id_de_thi, :diem)";
+    $stmt = $conn->prepare($sql);
+    $stmt->bindParam(':bo_ket_qua', $true);
+    $stmt->bindParam(':id_nguoi_dung', $userID);
+    $stmt->bindParam(':id_de_thi', $id); // Chú ý sửa tên tham số này thành :pttt
+    $stmt->bindParam(':diem', $diem);
+   
+    $stmt->execute();
+    $last_id = $conn->lastInsertId();
+    return $last_id;
+}

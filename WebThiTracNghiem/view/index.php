@@ -5,7 +5,9 @@ include "../model/taikhoan.php";
 include "../model/chuyende.php";
 include "../model/lichthi.php";
 include "../model/dethi.php";
+include "../model/dapan.php";
 include "../model/ketqua.php";
+
 $dscd = loadall_chuyende();
 $dslt = loadall_lichthi();
 include "_header.php";
@@ -126,13 +128,13 @@ include "../model/dethi_cauhoi.php";
                     }
 
 
-                    if (isset($_POST['btnNopbai'])) {
+                    /* if (isset($_POST['btnNopbai'])) {
                         // add_ketqua_nguoidung($_SESSION['user']['id'], $list_trangthi['ten_de']);
 
                         unset($_SESSION['ten_de']);
                         // session_destroy(); 
                         echo "<script>window.location.href='?act=ketqua';</script>";
-                    }
+                    } */
                 }
                 echo "<style>
                         header,footer {
@@ -144,7 +146,57 @@ include "../model/dethi_cauhoi.php";
                 break;
             
               
-            case 'ketqua':
+            case 'baithi':
+                if (isset($_SESSION['user'])) {
+                    if (isset($_POST['btnNopbai'])) {
+                        $userID = $_SESSION['user']['id'];
+                        $key = "bailam-$userID";
+
+                        $id_lichthi = $_POST['id_lichthi'];
+
+                        $lichthi = getOne_lichthi($id_lichthi);
+                        $list_trangthi = loadAll_dethi($id_lichthi);
+                        $list_cauhoi = load_cauoi($list_trangthi['id']);
+                        $id = $_POST['id'];
+                        $tenkithi = loadone_lichthi($id_lichthi);
+                        $dapan0 = dapan($_POST['id']);
+                        $total=count( $dapan0 );   /*đếmm tổng số câu trong bài thi và lấy 10/ tổng để nhân với số câu đúng  */
+                        
+                        $bailam = [];
+                        $true = 0;
+                        $cau = 0;
+                        foreach ($list_cauhoi as $keych => $listch) {
+                            $question_number = $keych + 1;
+                            $luachon = 'content-dapan-' . $question_number;
+
+                            if (isset($_POST[$luachon])) {
+
+                                $bailam[$question_number] = $_POST[$luachon];
+                            } else {
+
+                                $bailam[$question_number] = "";
+                            }
+                            
+                        }
+                        foreach ($dapan0 as $key => $listda) {
+                            $a = $listda['content_dapan'];
+                            $dapan[$key + 1] = $a;
+                            $cau    ++;
+                            if (trim( $bailam[$key + 1]) === trim($dapan[$key + 1])) {
+                                $true++;
+                            }
+                        }
+                        $diem = round(($true * 10/$total),2);    /* làm tròn ddieemr đến số thập phân thứ 2 */
+                     /*    echo '<pre>';
+                        print_r( $diem );
+                        echo '<br>';
+                        print_r(  $true);
+                        die; */
+                        $idkq=kq($true,$userID,$_POST['id'],$diem);
+
+                    }
+
+                }
 
                 include 'ketqua.php';
                 break;

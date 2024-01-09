@@ -100,10 +100,11 @@
     }
 
     function clearStoredTime() {
-        // Xóa dữ liệu đã lưu trữ từ localStorage
-        localStorage.removeItem('initialTimestamp');
-        localStorage.removeItem('remainingTime');
-    }
+    // Xóa dữ liệu đã lưu trữ từ localStorage
+    localStorage.removeItem('initialTimestamp');
+    localStorage.removeItem('remainingTime');
+}
+
 
     function updateClock() {
         // Kiểm tra xem đếm ngược đã đạt đến không
@@ -146,100 +147,113 @@
         calculateTimeDifference(<?= $lichthi['time'] ?>)
     }, 1000);
     // Kiểm tra xem có thời gian đã lưu trữ khi trang web được tải
-
     getStoredTime();
 </script>
-
 <div class="container-thi">
-    <div class='title'>
-        <div class="title-thi">
-            <!-- <h2>Thi thử THPT Quốc Gia 2024</h2> -->
-            <?php $tenkithi = loadone_lichthi($id_lichthi) ?>
-            <h2><?php echo $tenkithi['name'] ?></h2>
-        </div>
-        <div class="thoi-gian" id="thoiGian">
-            <p>Thời gian còn lại: <span id="total_time"></span> </p>
-        </div>
-    </div>
-    <div class="content-thi">
-        <div class="box-left" id="fixedBoxLeft">
-            <div class="box-title">
-                <p class="bold">Câu hỏi</p>
+    <form action=" ?act=baithi" method="post">
+        <div class='title'>
+            <div class="title-thi">
+                <!-- <h2>Thi thử THPT Quốc Gia 2024</h2> -->
+                <?php $tenkithi = loadone_lichthi($id_lichthi) ?>
+                <h2>
+                    <input type="hidden" name="id_lichthi" value="   <?php echo $tenkithi['id'] ?>">
+                    <?php echo $tenkithi['name'] ?>
+                </h2>
             </div>
-            <div class="box-content">
-                <div class="row-cauhoi">
-                    <?php foreach ($list_cauhoi as $keych => $listch) : ?>
-                        <div>
-                            <a href="#<?= $keych + 1 ?>" data-question-id="question<?= $keych + 1 ?>"><?= $keych + 1 ?></a>
-                        </div>
-                    <?php endforeach; ?>
-                    <!-- <div>
+            <div class="thoi-gian" id="thoiGian">
+                <p>Thời gian còn lại: <span id="total_time"></span> </p>
+            </div>
+        </div>
+        <div class="content-thi">
+            <form action=" ?act=baithi" method="post">
+                <input type="hidden" name="id" value="  <?= $list_trangthi['id'] ?>">
+                <div class="box-left" id="fixedBoxLeft">
+                    <div class="box-title">
+                        <p class="bold">Câu hỏi</p>
+                    </div>
+                    <div class="box-content">
+                        <div class="row-cauhoi">
+                            <?php foreach ($list_cauhoi as $keych => $listch) : ?>
+                                <div>
+                                    <a href="#<?= $keych + 1 ?>" data-question-id="question<?= $keych + 1 ?>">
+                                        <?= $keych + 1 ?>
+                                    </a>
+                                </div>
+                            <?php endforeach; ?>
+                            <!-- <div>
                         <a href="#" data-question-id="question2">2</a>
                     </div> -->
 
-                </div>
-                <form action="?act=trangthi&id_lichthi=<?= $id_lichthi ?>" method="post" onsubmit="return confirmSubmission()">
-                    <button type='submit' name="btnNopbai">Nộp bài</button>
-                </form>
-            </div>
-        </div>
-
-        <div class="box-center" id="fixedBoxCenter">
-            <div class="box-title" align='center'>
-                <p class="bold">
-                    <?php
-                    echo $list_trangthi['ten_de'];
-                    // echo $_SESSION['ten_de'];
-                    ?></p>
-
-            </div>
-            <div class="box-content">
-
-                <!--Câu hỏi mà có hình ảnh  -->
-                <?php foreach ($list_cauhoi as $keych => $listch) :
-                    $hinhanh = "../uploads/" . $listch['image'];
-                    if (is_file($hinhanh)) {
-                        $img_path = "<img src='" . $hinhanh . "' width='80px'>";
-                    } else {
-                        $img_path = "";
-                    }
-                ?>
-                    <div class="box-cauhoi">
-                        <div class="content-cauhoi">
-                            <p class='bold' id="<?= $keych + 1 ?>">Câu <?= $keych + 1 ?>: <?= $listch['content'] ?></p>
-                            <div class="img-cauhoi">
-                                <!-- <img src="../assets/img/banner0.webp" alt=""> -->
-                                <?= $img_path ?>
-                            </div>
                         </div>
 
-                        <div class="box-dapan">
-                            <?php
-                            $list_dapan = load_dapan($listch['id_cauhoi']);
-                            foreach ($list_dapan as $keyda => $dapan) :
-                                $hinh = "../uploads/" . $dapan['image'];
-                                if (is_file($hinh)) {
-                                    $img = "<img src='" . $hinh . "' width='100px'>";
-                                } else {
-                                    $img = "";
-                                }
-                            ?>
-
-                                <div>
-                                    <input value="<?php echo $dapan['id']  ?>" type="radio" name="content-dapan-<?php echo $keych + 1  ?>" id="dapan<?= $keych + 1 ?>_<?= $keyda + 1 ?>" data-question-id="question<?= $keych + 1 ?>">
-                                    <label for="dapan<?= $keych + 1 ?>_<?= $keyda + 1 ?>" data-question-id="question<?= $keych + 1 ?>"><?php echo $dapan['content_dapan'] ?></label> <br>
-                                    <!-- <img src="../assets/img/banner0.webp" alt=""> -->
-                                    <?= $img ?>
-                                </div>
-                            <?php endforeach; ?>
-                        </div>
+                        <button type='submit' name="btnNopbai">Nộp bài</button>
 
                     </div>
-                <?php endforeach; ?>
+                </div>
 
-            </div>
+                <div class="box-center" id="fixedBoxCenter">
+                    <div class="box-title" align='center'>
+                        <p class="bold">
+                            <?= $list_trangthi['ten_de'] ?>
+                            <input type="hidden" name="id" value="  <?= $list_trangthi['id'] ?>">
+                        </p>
+                    </div>
+                    <div class="box-content">
+
+                        <!--Câu hỏi mà có hình ảnh  -->
+                        <?php foreach ($list_cauhoi as $keych => $listch) :
+                            $hinhanh = "../uploads/" . $listch['image'];
+                            if (is_file($hinhanh)) {
+                                $img_path = "<img src='" . $hinhanh . "' width='80px'>";
+                            } else {
+                                $img_path = "";
+                            }
+                        ?>
+                            </strong>
+                            <div class="box-cauhoi">
+                                <div class="content-cauhoi">
+                                    <p class='bold' id="<?= $keych + 1 ?>"> <strong>Câu
+                                            <?= $keych + 1 ?>:
+                                            <?= $listch['content'] ?>
+                                        </strong></p>
+                                    <div class="img-cauhoi">
+                                        <!-- <img src="../assets/img/banner0.webp" alt=""> -->
+                                        <?= $img_path ?>
+                                    </div>
+                                </div>
+
+                                <div class="box-dapan">
+                                    <?php
+                                    $list_dapan = load_dapan($listch['id_cauhoi']);
+                                    foreach ($list_dapan as $keyda => $dapan) :
+                                        $hinh = "../uploads/" . $dapan['image'];
+                                        if (is_file($hinh)) {
+                                            $img = "<img src='" . $hinh . "' width='100px'>";
+                                        } else {
+                                            $img = "";
+                                        }
+                                    ?>
+
+                                        <div>
+                                            <input type="radio" name="content-dapan-<?php echo $keych + 1 ?>" id="dapan<?= $keych + 1 ?>_<?= $keyda + 1 ?>" data-question-id="question<?= $keych + 1 ?>" value=" <?php echo $dapan['content_dapan'] ?>">
+                                            <label for="dapan<?= $keych + 1 ?>_<?= $keyda + 1 ?>" data-question-id="question<?= $keych + 1 ?>">
+                                                <?php echo $dapan['content_dapan'] ?>
+                                            </label> <br>
+                                            <!-- <img src="../assets/img/banner0.webp" alt=""> -->
+                                            <?= $img ?>
+                                        </div>
+                                    <?php endforeach; ?>
+                                </div>
+
+                            </div>
+                        <?php endforeach; ?>
+
+                    </div>
+                </div>
+
+
         </div>
-    </div>
+    </form>
 </div>
 
 <script>
