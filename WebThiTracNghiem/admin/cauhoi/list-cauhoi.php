@@ -3,7 +3,7 @@
 
      <!-- Page Heading -->
      <h1 class="h3 mb-3 text-gray-800">Danh sách câu hỏi</h1>
-     <p class="mb-3"><a  href="?act=addch" >Thêm câu hỏi</a></p>
+     <p class="mb-3"><a  href="?act=addch"  class="btn_admin">Thêm câu hỏi</a></p>
 
      <!-- DataTales Example -->
      <div class="card shadow mb-4">

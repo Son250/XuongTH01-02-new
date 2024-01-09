@@ -76,11 +76,9 @@
                                     <div>
                                         <?php
                                         if ($dapan['right_answer'] == 1) : ?>
-                                            <input value="<?php echo $dapan['id']  ?>" type="radio" name="content-dapan-<?php echo $keych + 1  ?>" id="dapan<?= $keych + 1 ?>_<?= $keyda + 1 ?>" data-question-id="question<?= $keych + 1 ?>">
 
                                             <label class="green" for="dapan<?= $keych + 1 ?>_<?= $keyda + 1 ?>" data-question-id="question<?= $keych + 1 ?>"><?php echo $dapan['content_dapan'] ?></label> <br>
                                         <?php else : ?>
-                                            <input value="<?php echo $dapan['id']  ?>" type="radio" name="content-dapan-<?php echo $keych + 1  ?>" id="dapan<?= $keych + 1 ?>_<?= $keyda + 1 ?>" data-question-id="question<?= $keych + 1 ?>">
 
                                             <label class="red" for="dapan<?= $keych + 1 ?>_<?= $keyda + 1 ?>" data-question-id="question<?= $keych + 1 ?>"><?php echo $dapan['content_dapan'] ?></label> <br>
 

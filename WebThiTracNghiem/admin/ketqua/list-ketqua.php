@@ -2,7 +2,7 @@
 <div class="container-fluid">
      <!-- Page Heading -->
      <h1 class="h3 mb-3 text-gray-800">Danh sách kết quả thi</h1>
-     <p class="mb-3"><a  href="?act=addkq">Thêm kết quả</a></p>
+     <!-- <p class="mb-3"><a  href="?act=addkq"  class="btn_admin">Thêm kết quả</a></p> -->
      <!-- DataTales Example -->
      <div class="card shadow mb-4">
           <div class="card-header py-3">

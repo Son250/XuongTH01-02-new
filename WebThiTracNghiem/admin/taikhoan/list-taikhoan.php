@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <h1 class="h3 mb-3 text-gray-800">Danh sách khách hàng</h1>
-    <p class="mb-3"><a href="?act=addtk">Thêm khách hàng</a></p>
+    <p class="mb-3"><a href="?act=addtk"  class="btn_admin">Thêm khách hàng</a></p>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">

@@ -2,7 +2,7 @@
 <div class="container-fluid">
     <!-- Page Heading -->
     <h1 class="h3 mb-3 text-gray-800">Danh sách lịch thi</h1>
-    <p class="mb-3"><a href="?act=addlt">Thêm lịch thi</a></p>
+    <p class="mb-3"><a href="?act=addlt"  class="btn_admin">Thêm lịch thi</a></p>
     <!-- DataTales Example -->
     <div class="card shadow mb-4">
         <div class="card-header py-3">
@@ -23,6 +23,7 @@
                             <td>Thao tác</td>
                         </tr>
                     </thead>
+
                     <tfoot>
                         <tr>
                             <td>STT</td>
@@ -36,7 +37,6 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                       
                         
                             <?php foreach ($dslt as $key => $value) : extract($value) ?>
                             <input type="hidden" name="idlt" value="<?= $id?>">

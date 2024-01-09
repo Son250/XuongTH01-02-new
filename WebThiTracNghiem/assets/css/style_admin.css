@@ -8,3 +8,10 @@
 .bold {
     font-weight: bold;
 }
+
+.btn_admin {
+    padding: 10px;
+    background-color: rgb(232, 232, 232);
+    border-radius: 5px;
+    text-decoration: none;
+}

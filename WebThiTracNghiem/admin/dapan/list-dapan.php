@@ -7,9 +7,9 @@
 
     $maxAnswers = 4;
     if (count($listdapan) < $maxAnswers) {
-        echo '    <p class="mb-3"><a href="?act=themda&id=' . $_GET['id'] . '">Thêm đáp án</a></p>';
+        echo '    <p class="mb-3"><a href="?act=themda&id=' . $_GET['id'] . '"  class="btn_admin">Thêm đáp án</a></p>';
     } else {
-        echo '     <p class="mb-3"><a  href="?act=themda">Thêm đáp án</a></p>';
+        echo '     <p class="mb-3"><a  href="?act=themda"  class="btn_admin">Thêm đáp án</a></p>';
     }
     ?>
     <!-- DataTales Example -->
